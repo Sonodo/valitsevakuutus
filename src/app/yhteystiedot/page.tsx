@@ -8,7 +8,7 @@ import { SITE_URL, SITE_NAME } from '@/lib/constants';
 export const metadata: Metadata = {
   title: 'Yhteystiedot — Ota yhteyttä',
   description:
-    'Ota yhteyttä Valitse Vakuutukseen. Autamme mielellämme kaikissa vakuutusvertailuun liittyvissä kysymyksissä.',
+    'Ota yhteyttä Vakuutusvertailuun. Autamme mielellämme kaikissa vakuutusvertailuun liittyvissä kysymyksissä.',
   alternates: {
     canonical: `${SITE_URL}/yhteystiedot`,
   },
@@ -58,10 +58,10 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold text-navy">Sähköposti</h3>
                   <a
-                    href="mailto:info@valitse.fi"
+                    href="mailto:info@valitsevakuutus.fi"
                     className="text-teal hover:text-teal-dark"
                   >
-                    info@valitse.fi
+                    info@valitsevakuutus.fi
                   </a>
                   <p className="mt-1 text-sm text-gray-500">
                     Vastaamme yleensä 1–2 arkipäivän kuluessa.
@@ -118,10 +118,10 @@ export default function ContactPage() {
                     Oletko vakuutusyhtiön edustaja tai kiinnostunut yhteistyöstä?
                     Lähetä viesti osoitteeseen{' '}
                     <a
-                      href="mailto:info@valitse.fi"
+                      href="mailto:info@valitsevakuutus.fi"
                       className="text-teal hover:text-teal-dark"
                     >
-                      info@valitse.fi
+                      info@valitsevakuutus.fi
                     </a>
                     .
                   </p>

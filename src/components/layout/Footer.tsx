@@ -2,15 +2,18 @@ import Link from 'next/link';
 import { Shield } from 'lucide-react';
 import { FOOTER_LINKS, SITE_NAME } from '@/lib/constants';
 
+const VALITSE_NETWORK_LINKS = [
+  { label: 'Valitse.fi', description: 'Vertaa ja valitse', href: 'https://valitse.fi' },
+  { label: 'Valitse Sähkö', description: 'Sähkövertailu', href: 'https://valitsesahko.fi' },
+  { label: 'Valitse Laina', description: 'Lainavertailu', href: 'https://valitselaina.fi' },
+  { label: 'Valitse Puhelin', description: 'Puhelinliittymät', href: 'https://valitsepuhelin.fi' },
+];
+
 const CROSS_PRODUCT_LINKS = [
   { label: 'Asuntomaatti', description: 'Asuntojen hintavertailu', href: 'https://asuntomaatti.fi' },
-  { label: 'Valitse Laina', description: 'Lainojen vertailu', href: 'https://valitselaina.fi' },
-  { label: 'Valitse Sähkö', description: 'Sähkön hintavertailu', href: 'https://valitsesahko.fi' },
-  { label: 'Valitse Puhelin', description: 'Puhelinliittymien vertailu', href: 'https://valitsepuhelin.fi' },
   { label: 'Alennuskartta', description: 'Tarjoukset ja alennukset', href: 'https://alennuskartta.fi' },
   { label: 'Fixmera', description: 'Kotipalvelut', href: 'https://fixmera.com' },
   { label: 'Lakimaatti', description: 'Oikeudelliset asiakirjat', href: 'https://lakimaatti.fi' },
-  { label: 'Valitse', description: 'Kaikki vertailupalvelut', href: 'https://valitse.fi' },
 ];
 
 export default function Footer() {
@@ -19,7 +22,7 @@ export default function Footer() {
   return (
     <footer className="bg-navy-dark text-white">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-6">
           {/* Vakuutukset */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/60">
@@ -77,10 +80,34 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Valitse-verkosto */}
+          <div>
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/60">
+              Valitse-verkosto
+            </h3>
+            <ul className="space-y-2">
+              {VALITSE_NETWORK_LINKS.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener"
+                    className="text-sm text-white/70 transition-colors hover:text-white"
+                  >
+                    {link.label}
+                    <span className="block text-xs text-white/40">
+                      {link.description}
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Muut palvelumme */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/60">
-              Osa Valitse-verkostoa
+              Muut palvelumme
             </h3>
             <ul className="space-y-2">
               {CROSS_PRODUCT_LINKS.map((link) => (
@@ -117,7 +144,7 @@ export default function Footer() {
                 Puolueeton ja ilmainen palvelu.
               </p>
               <p className="text-sm text-white/70">
-                info@valitse.fi
+                info@valitsevakuutus.fi
               </p>
             </div>
           </div>

@@ -64,7 +64,7 @@ export default function CookiePolicyPage() {
                 </thead>
                 <tbody className="text-gray-600">
                   <tr className="border-b border-gray-100">
-                    <td className="py-2 pr-4 font-mono text-xs">valitsevakuutus-cookie-consent</td>
+                    <td className="py-2 pr-4 font-mono text-xs">vakuutusvertailu-cookie-consent</td>
                     <td className="py-2 pr-4">Evästeasetustesi tallennus</td>
                     <td className="py-2">365 päivää</td>
                   </tr>
@@ -240,10 +240,10 @@ export default function CookiePolicyPage() {
               </Link>
               . Evästeitä koskevissa kysymyksissä voit ottaa yhteyttä:{' '}
               <a
-                href="mailto:info@valitse.fi"
+                href="mailto:info@valitsevakuutus.fi"
                 className="text-teal underline"
               >
-                info@valitse.fi
+                info@valitsevakuutus.fi
               </a>
             </p>
           </div>

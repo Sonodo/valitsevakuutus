@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from '@/lib/constants';
 import CookieConsent from '@/components/layout/CookieConsent';
-import { GoogleAnalytics } from '@/components/GoogleAnalytics';
+import GoogleAnalytics from '@/components/seo/GoogleAnalytics';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -34,6 +34,9 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: '/favicon.svg',
+  },
+  verification: {
+    google: 'txKlddizt2JX0hbBYELQWYtzxdWRnSzohDhFA6nrLuU',
   },
 };
 

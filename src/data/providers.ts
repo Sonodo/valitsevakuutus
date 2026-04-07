@@ -25,7 +25,7 @@ const pohjola: InsuranceProvider = {
   shortName: 'Pohjola',
   founded: 1891,
   ownership: 'OP Osuuskuntaryhmä (osuustoiminnallinen)',
-  marketShare: 32.0,
+  marketShare: 32.6,
   size: 'large',
   headquarters: 'Helsinki',
   employeeCount: '~12 000 (OP-ryhmä)',
@@ -505,7 +505,7 @@ const lahitapiola: InsuranceProvider = {
   shortName: 'LähiTapiola',
   founded: 2012,
   ownership: 'Keskinäinen vakuutusyhtiöryhmä (20 alueyhtiötä)',
-  marketShare: 25.8,
+  marketShare: 26.4,
   size: 'large',
   headquarters: 'Espoo',
   employeeCount: '~3 400',
@@ -2240,7 +2240,7 @@ const alandia: InsuranceProvider = {
   headquarters: 'Maarianhamina, Ahvenanmaa',
   employeeCount: '~150',
   customerCount: 'Noin 30 000 asiakasta',
-  website: 'https://www.alandia.fi',
+  website: 'https://www.alandia.com',
   description:
     'Ahvenanmaalainen vakuutusyhtiö, joka on erikoistunut merivakuutuksiin ja palvelee erityisesti saaristoalueiden ja ranniikon asukkaita. Vahva niche-vakuuttaja vene- ja merenkulkuvakuutuksissa.',
   longDescription:
@@ -2397,7 +2397,7 @@ const saastopankki: InsuranceProvider = {
   headquarters: 'Espoo',
   employeeCount: '~60',
   customerCount: 'Noin 40 000 vakuutusasiakasta',
-  website: 'https://www.saastopankki.fi/vakuutukset',
+  website: 'https://www.saastopankki.fi/fi/vakuutukset',
   description:
     'Säästöpankkien vakuutusyhtiö, joka tarjoaa henkilövakuutuksia säästöpankkien asiakkaille. Uusi ja kasvava toimija, joka yhdistää pankki- ja vakuutuspalvelut.',
   longDescription:

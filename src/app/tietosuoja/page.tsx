@@ -7,7 +7,7 @@ import { SITE_URL, SITE_NAME } from '@/lib/constants';
 export const metadata: Metadata = {
   title: 'Tietosuojaseloste — Evästeet ja yksityisyys',
   description:
-    'Valitse Vakuutuksen tietosuojaseloste. Lue miten käsittelemme tietojasi, mitä evästeitä käytämme ja mitkä ovat oikeutesi.',
+    'Vakuutusvertailun tietosuojaseloste. Lue miten käsittelemme tietojasi, mitä evästeitä käytämme ja mitkä ovat oikeutesi.',
   alternates: {
     canonical: `${SITE_URL}/tietosuoja`,
   },
@@ -41,7 +41,7 @@ export default function PrivacyPolicyPage() {
               <br />
               Helsinki, Suomi
               <br />
-              Sähköposti: info@valitse.fi
+              Sähköposti: info@valitsevakuutus.fi
               <br />
               Verkkosivusto: {SITE_URL}
             </p>
@@ -184,7 +184,7 @@ export default function PrivacyPolicyPage() {
             </ul>
             <p>
               Voit käyttää oikeuksiasi lähettämällä sähköpostia osoitteeseen{' '}
-              <a href="mailto:info@valitse.fi">info@valitse.fi</a>.
+              <a href="mailto:info@valitsevakuutus.fi">info@valitsevakuutus.fi</a>.
               Vastaamme pyyntöihin 30 päivän kuluessa.
             </p>
 
@@ -242,7 +242,7 @@ export default function PrivacyPolicyPage() {
             <p>
               Tietosuojaan liittyvissä kysymyksissä ota yhteyttä:
               <br />
-              <a href="mailto:info@valitse.fi">info@valitse.fi</a>
+              <a href="mailto:info@valitsevakuutus.fi">info@valitsevakuutus.fi</a>
             </p>
           </div>
         </div>

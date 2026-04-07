@@ -210,10 +210,10 @@ export default function TermsPage() {
               Näihin ehtoihin liittyvissä kysymyksissä voit ottaa meihin yhteyttä
               sähköpostitse:{' '}
               <a
-                href="mailto:info@valitse.fi"
+                href="mailto:info@valitsevakuutus.fi"
                 className="text-teal underline"
               >
-                info@valitse.fi
+                info@valitsevakuutus.fi
               </a>
             </p>
           </div>
