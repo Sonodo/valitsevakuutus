@@ -20,6 +20,14 @@ function updateGtagConsent(consent: ConsentState) {
       ad_personalization: consent.marketing ? 'granted' : 'denied',
     });
   }
+  // Update Clarity consent
+  const w = window as unknown as { clarity?: (...args: unknown[]) => void };
+  if (w.clarity) {
+    w.clarity('consentv2', {
+      analytics_storage: consent.analytics ? 'granted' : 'denied',
+      ad_storage: 'denied',
+    });
+  }
 }
 
 export default function CookieConsent() {
@@ -49,6 +57,8 @@ export default function CookieConsent() {
   const saveConsent = useCallback((state: ConsentState) => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     updateGtagConsent(state);
+    // Notify GoogleAnalytics component in the same tab
+    window.dispatchEvent(new Event('cookie-consent-update'));
     setVisible(false);
   }, []);
 

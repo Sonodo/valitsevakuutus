@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from '@/lib/constants';
 import CookieConsent from '@/components/layout/CookieConsent';
 import GoogleAnalytics from '@/components/seo/GoogleAnalytics';
 import './globals.css';
+
+const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || '';
 
 export const metadata: Metadata = {
   title: {
@@ -46,13 +49,6 @@ const organizationSchema = {
   name: SITE_NAME,
   url: SITE_URL,
   description: SITE_DESCRIPTION,
-  logo: `${SITE_URL}/favicon.svg`,
-  sameAs: [],
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'customer service',
-    availableLanguage: 'Finnish',
-  },
 };
 
 const websiteSchema = {
@@ -86,6 +82,16 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-white text-gray-900 antialiased">
         <GoogleAnalytics />
+        {CLARITY_ID && (
+          <>
+            <Script id="ms-clarity" strategy="afterInteractive">
+              {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","${CLARITY_ID}");`}
+            </Script>
+            <Script id="clarity-consent-default" strategy="afterInteractive">
+              {`(function w(){if(window.clarity){try{var s=localStorage.getItem("valitsevakuutus-cookie-consent");var c=s?JSON.parse(s).analytics:false;clarity("consentv2",{analytics_storage:c?"granted":"denied",ad_storage:"denied"})}catch(e){clarity("consentv2",{analytics_storage:"denied",ad_storage:"denied"})}}else{setTimeout(w,100)}})();`}
+            </Script>
+          </>
+        )}
         {children}
         <CookieConsent />
       </body>

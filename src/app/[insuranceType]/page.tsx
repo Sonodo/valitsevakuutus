@@ -179,7 +179,7 @@ export default async function InsuranceTypePage({
               )}
             </div>
           ) : (
-            <p className="text-gray-500">Tuotteita ladataan...</p>
+            <p className="text-gray-500">Ei tuotteita saatavilla tässä kategoriassa.</p>
           )}
         </section>
 

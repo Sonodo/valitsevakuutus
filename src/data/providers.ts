@@ -35,7 +35,6 @@ const pohjola: InsuranceProvider = {
     'Suomen suurin vakuuttaja — OP-ryhmän vahinkovakuutusyhtiö. Tarjoaa kattavan valikoiman vakuutuksia henkilö- ja yritysasiakkaille. Osuuskunta-asiakkuus tuo merkittävät bonusedut.',
   longDescription:
     'Pohjola Vakuutus on osa OP-ryhmää, joka on Suomen suurin finanssiryhmä. OP-ryhmällä on yli 4,5 miljoonaa omistaja-asiakasta ja laaja konttoriverkosto ympäri Suomen. Vakuutusasiakkaat hyötyvät OP-bonuksesta, joka voi olla jopa 17 % vakuutusmaksuista. Pohjolan vakuutukset kattavat käytännössä kaikki vakuutustarpeet autoista kotiin, matkustamiseen, lemmikkeihin, henkivakuutukseen ja yritystoimintaan. Digitaaliset palvelut ovat kattavat: OP-mobiilisovelluksella voi hoitaa sekä pankki- että vakuutusasiat yhdestä paikasta.',
-  logo: '/logos/pohjola.svg',
   color: '#FF6600',
   satisfaction: 7.8,
   claimProcessRating: 7.5,
@@ -130,7 +129,7 @@ const pohjolaProducts: InsuranceProduct[] = [
       'Ei lasivahinkovakuutusta',
     ],
     suitableFor: ['Vanhempien autojen omistajat', 'Vähän ajavat', 'Budjettitietoiset'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-12',
   },
   // Auto - Osakasko (standard)
   {
@@ -167,7 +166,7 @@ const pohjolaProducts: InsuranceProduct[] = [
       'Ei lunastusturvaa',
     ],
     suitableFor: ['5–15 vuotta vanhojen autojen omistajat', 'Maaseudulla ajavat (hirvivahinkoturva)', 'Kohtuullista turvaa hakevat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-12',
   },
   // Auto - Täyskasko (comprehensive)
   {
@@ -208,7 +207,7 @@ const pohjolaProducts: InsuranceProduct[] = [
       'Omavastuu kolarissa vähintään 200 €',
     ],
     suitableFor: ['Uudehkojen autojen omistajat (alle 10 v)', 'Kaupungissa pysäköivät', 'Rahoitusauton omistajat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-12',
   },
   // Auto - Laaja täyskasko (premium)
   {
@@ -251,7 +250,7 @@ const pohjolaProducts: InsuranceProduct[] = [
       'Kilpailukykyinen vain OP-bonuksen kanssa',
     ],
     suitableFor: ['Uusien ja arvokkaiden autojen omistajat', 'Paljon ajavat', 'Rahoitus- tai leasingautojen käyttäjät'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-12',
   },
   // Home - Kotivakuutus
   {
@@ -288,7 +287,7 @@ const pohjolaProducts: InsuranceProduct[] = [
       'Korvauskatot voivat olla matalia arvotavaroille',
     ],
     suitableFor: ['Kerrostalo- ja rivitaloasukkaat', 'Vuokra-asukkaat', 'Perusturvaa hakevat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-12',
   },
   // Home - Laaja kotivakuutus
   {
@@ -327,7 +326,7 @@ const pohjolaProducts: InsuranceProduct[] = [
       'Arvotavaroiden korvauskatot saattavat edellyttää erillistä arvotavaravakuutusta',
     ],
     suitableFor: ['Omakotitalon omistajat', 'Paljon arvokasta irtaimistoa omistavat', 'Kokonaisvaltaista turvaa haluavat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-12',
   },
   // Travel
   {
@@ -362,7 +361,7 @@ const pohjolaProducts: InsuranceProduct[] = [
       'Myöhästymisturvaa ei peruspaketissa',
     ],
     suitableFor: ['Säännöllisesti matkustavat', 'Perheet', 'EU-alueella matkustavat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-12',
   },
   // Pet - Dog
   {
@@ -395,7 +394,7 @@ const pohjolaProducts: InsuranceProduct[] = [
       'Rotukohtaiset rajoitukset ja hinnanvaihtelut',
     ],
     suitableFor: ['Koiranomistajat', 'Pentujen omistajat', 'Aktiivisesti koiran kanssa liikkuvat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-12',
   },
   // Life
   {
@@ -423,7 +422,7 @@ const pohjolaProducts: InsuranceProduct[] = [
       'Vakavan sairauden turva lisämaksullinen',
     ],
     suitableFor: ['Perheelliset', 'Asuntolainaa omaavat', 'Yrittäjät'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-12',
   },
   // Accident
   {
@@ -454,7 +453,7 @@ const pohjolaProducts: InsuranceProduct[] = [
       'Päiväraha ei sisälly perusturvaan',
     ],
     suitableFor: ['Aktiiviset harrastajat', 'Lapsiperheet', 'Ulkoilua ja urheilua harrastavat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-12',
   },
   // Child
   {
@@ -487,7 +486,7 @@ const pohjolaProducts: InsuranceProduct[] = [
       'Hoitokulujen korvauskatot kohtalaisen matalat',
     ],
     suitableFor: ['Vauvaperheet', 'Leikki-ikäisten vanhemmat', 'Kouluikäisten vanhemmat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-12',
   },
 ];
 
@@ -514,7 +513,6 @@ const lahitapiola: InsuranceProvider = {
     'Suomen toiseksi suurin vakuutusryhmä, joka koostuu 20 alueyhtiöstä. Erityisen vahva maaseudulla ja pienissä kaupungeissa. Tarjoaa laajan valikoiman vakuutuksia henkilö-, maatila- ja yritysasiakkaille.',
   longDescription:
     'LähiTapiola on keskinäinen vakuutusyhtiöryhmä, jossa asiakkaat ovat myös omistajia. Ryhmä koostuu 20 alueyhtiöstä, mikä mahdollistaa paikallisen palvelun ympäri Suomen. LähiTapiola on erityisen vahva maaseudulla ja maatilavakuutuksissa. Yhtiö hankki 70 % POP Vakuutuksen emoyhtiöstä vuonna 2023, mikä vahvisti digitaalista kanavaa. LähiTapiolalla on oma sijoitusyhtiö (LähiTapiola Varainhoito) sekä laaja henkivakuutustarjonta. Alueyhtiörakenne tarkoittaa, että hinnat ja palvelu voivat vaihdella alueen mukaan.',
-  logo: '/logos/lahitapiola.svg',
   color: '#00A651',
   satisfaction: 7.9,
   claimProcessRating: 7.8,
@@ -601,7 +599,7 @@ const lahitapiolaProducts: InsuranceProduct[] = [
       'Hinnat vaihtelevat alueyhtiöittäin',
     ],
     suitableFor: ['Budjettitietoiset autoilijat', 'Vanhemman auton omistajat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-18',
   },
   {
     id: 'lahitapiola-auto-tayskasko',
@@ -638,7 +636,7 @@ const lahitapiolaProducts: InsuranceProduct[] = [
       'Hinnat voivat erota alueyhtiöiden välillä',
     ],
     suitableFor: ['Uudehkojen autojen omistajat', 'Keskittämisedusta hyötyvät'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-18',
   },
   {
     id: 'lahitapiola-home-standard',
@@ -672,7 +670,7 @@ const lahitapiolaProducts: InsuranceProduct[] = [
       'Korvauskatot vaihtelevat alueyhtiöittäin',
     ],
     suitableFor: ['Kerrostaloasukkaat', 'Pyöräilijät', 'Paikallista palvelua arvostavat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-18',
   },
   {
     id: 'lahitapiola-travel-standard',
@@ -703,7 +701,7 @@ const lahitapiolaProducts: InsuranceProduct[] = [
       'Rajoitukset riskimaissa',
     ],
     suitableFor: ['Lomamatkaajat', 'Euroopassa matkustavat', 'Perheet'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-18',
   },
   {
     id: 'lahitapiola-pet-dog',
@@ -733,7 +731,7 @@ const lahitapiolaProducts: InsuranceProduct[] = [
       'Vanhemmilla koirilla korkeammat hinnat',
     ],
     suitableFor: ['Koiranomistajat', 'Maaseudun eläinten omistajat', 'Fysioterapiaa tarvitsevat koirat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-18',
   },
   {
     id: 'lahitapiola-life-standard',
@@ -758,7 +756,7 @@ const lahitapiolaProducts: InsuranceProduct[] = [
       'Vakavan sairauden turva lisämaksullinen',
     ],
     suitableFor: ['Perheelliset', 'Asuntolainan ottajat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-18',
   },
 ];
 
@@ -785,7 +783,6 @@ const ifInsurance: InsuranceProvider = {
     'Pohjoismaiden suurin vahinkovakuuttaja ja Suomen kolmanneksi suurin. Tunnetaan luotettavasta brändistä, kilpailukykyisistä hinnoista ja erinomaisesta digitaalisesta käyttökokemuksesta.',
   longDescription:
     'If on osa Sampo-konsernia ja Pohjoismaiden suurin vahinkovakuutusyhtiö. Suomessa If on kolmanneksi suurin noin 21 % markkinaosuudella. If tunnetaan erityisesti kilpailukykyisistä hinnoistaan nuorille kuljettajille ja digitaalisesta edelläkävijyydestään. Yhtiö on palkittu useissa kuluttajatesteissä "testivoittajana". If:n vahvuutena on pohjoismainen mittakaava, joka mahdollistaa tehokkaan riskien hallinnan ja kilpailukykyisen hinnoittelun. Korvauspalvelu on saanut erinomaisia arvioita — erityisesti nopeus ja asiakaslähtöisyys.',
-  logo: '/logos/if.svg',
   color: '#0054A6',
   satisfaction: 8.2,
   claimProcessRating: 8.5,
@@ -872,7 +869,7 @@ const ifProducts: InsuranceProduct[] = [
       'Ei oman auton turvaa',
     ],
     suitableFor: ['Nuoret kuljettajat', 'Hintaherkät autoilijat', 'Vanhempien autojen omistajat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-25',
   },
   {
     id: 'if-auto-osakasko',
@@ -906,7 +903,7 @@ const ifProducts: InsuranceProduct[] = [
       'Ei ilkivaltaturvaa',
     ],
     suitableFor: ['5–15-vuotiaat autot', 'Kohtuullista turvaa hakevat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-25',
   },
   {
     id: 'if-auto-tayskasko',
@@ -945,7 +942,7 @@ const ifProducts: InsuranceProduct[] = [
       'Ei konttoripalvelua',
     ],
     suitableFor: ['Uudehkojen autojen omistajat', 'Digitaalista palvelua arvostavat', 'Nuoret perheet'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-25',
   },
   {
     id: 'if-auto-premium',
@@ -987,7 +984,7 @@ const ifProducts: InsuranceProduct[] = [
       'Lunastusturva rajattu 3 vuoteen käyttöönotosta',
     ],
     suitableFor: ['Uusien premium-autojen omistajat', 'Paljon ajavat', 'Maksimaalista turvaa haluavat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-25',
   },
   {
     id: 'if-home-standard',
@@ -1022,7 +1019,7 @@ const ifProducts: InsuranceProduct[] = [
       'Arvotavaroiden yksittäiskorvausraja voi olla matala',
     ],
     suitableFor: ['Kerrostaloasukkaat', 'Vuokralaiset', 'Kattavaa perusturvaa hakevat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-25',
   },
   {
     id: 'if-home-premium',
@@ -1060,7 +1057,7 @@ const ifProducts: InsuranceProduct[] = [
       'Kallis vaihtoehto erityisesti omakotitaloille',
     ],
     suitableFor: ['Omakotitalon omistajat', 'Sähköpyörien omistajat', 'Maksimaalista turvaa haluavat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-25',
   },
   {
     id: 'if-travel-standard',
@@ -1091,7 +1088,7 @@ const ifProducts: InsuranceProduct[] = [
       'Riskiurheilulajit vaativat lisäturvaa',
     ],
     suitableFor: ['Aktiiviset matkaajat', 'Eurooppaan matkustavat', 'Kattavaa turvaa arvostavat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-25',
   },
   {
     id: 'if-pet-dog',
@@ -1121,7 +1118,7 @@ const ifProducts: InsuranceProduct[] = [
       'Ikärajat: vakuutettava alle 8-vuotiaana',
     ],
     suitableFor: ['Koiranomistajat', 'Pennun hankkijat', 'Suurten koirien omistajat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-25',
   },
   {
     id: 'if-child-standard',
@@ -1153,7 +1150,7 @@ const ifProducts: InsuranceProduct[] = [
       'Vakuutettava ennen 18 vuoden ikää',
     ],
     suitableFor: ['Vauvaperheet', 'Urheilevat lapset', 'Laaja turva -hakuiset vanhemmat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-25',
   },
 ];
 
@@ -1180,7 +1177,6 @@ const fennia: InsuranceProvider = {
     'Suomen neljänneksi suurin vahinkovakuuttaja, joka on erityisen vahva pk-yritysten vakuuttamisessa. Keskinäisenä yhtiönä asiakkaat ovat omistajia. Tarjoaa kilpailukykyiset henkilövakuutukset.',
   longDescription:
     'Fennia on vuonna 1882 perustettu keskinäinen vakuutusyhtiö, joka on erityisen tunnettu pk-yritysten ja yrittäjien vakuuttajana. Henkilöasiakkaille Fennia tarjoaa kilpailukykyisen valikoiman auto-, koti-, matka- ja lemmikkivakuutuksia. Fennian digitaaliset työkalut, erityisesti autovakuutuslaskuri, ovat saaneet hyvää palautetta käytettävyydestään. Fennian omistajuusrakenne keskinäisenä yhtiönä tarkoittaa, että voitot palautuvat asiakkaille etuina ja kilpailukykyisinä hintoina. Fennia-konserniin kuuluu myös Fennia-Henkivakuutus ja Fennia Varainhoito.',
-  logo: '/logos/fennia.svg',
   color: '#E30613',
   satisfaction: 7.6,
   claimProcessRating: 7.3,
@@ -1257,7 +1253,7 @@ const fenniaProducts: InsuranceProduct[] = [
       'Pienempi korjaamoverkosto kuin isoilla yhtiöillä',
     ],
     suitableFor: ['Hintavertailijat', 'Yrittäjät (samasta paikasta yritysvakuutuksetkin)'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-30',
   },
   {
     id: 'fennia-auto-tayskasko',
@@ -1292,7 +1288,7 @@ const fenniaProducts: InsuranceProduct[] = [
       'Korjaamoverkosto pienempi kuin IF:llä tai OP:lla',
     ],
     suitableFor: ['Hyvää hinta-laatusuhdetta hakevat', 'Yrittäjät'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-30',
   },
   {
     id: 'fennia-home-standard',
@@ -1326,7 +1322,7 @@ const fenniaProducts: InsuranceProduct[] = [
       'Vastuuvakuutuksen katto hieman matalampi kuin kilpailijoilla',
     ],
     suitableFor: ['Budjettitietoiset', 'Kerrostaloasukkaat', 'Ensimmäistä kotivakuutusta hakevat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-30',
   },
   {
     id: 'fennia-pet-dog',
@@ -1354,7 +1350,7 @@ const fenniaProducts: InsuranceProduct[] = [
       'Korvauskatot hieman keskitasoa',
     ],
     suitableFor: ['Budjettitietoiset koiranomistajat', 'Ensimmäisen koiravakuutuksen ottajat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-30',
   },
   {
     id: 'fennia-travel-standard',
@@ -1382,7 +1378,7 @@ const fenniaProducts: InsuranceProduct[] = [
       'Matkatavaroiden katto matala',
     ],
     suitableFor: ['Satunnaiset matkaajat', 'Budjettitietoiset'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-30',
   },
 ];
 
@@ -1399,7 +1395,7 @@ const turva: InsuranceProvider = {
   shortName: 'Turva',
   founded: 1910,
   ownership: 'Keskinäinen vakuutusyhtiö (ammattiliittotaustainen)',
-  marketShare: 3.5,
+  marketShare: 3.2,
   size: 'medium',
   headquarters: 'Tampere',
   employeeCount: '~300',
@@ -1409,7 +1405,6 @@ const turva: InsuranceProvider = {
     'Ammattiliittotaustainen keskinäinen vakuutusyhtiö, joka tunnetaan asiakastyytyväisyydestään ja reilusta hinnoittelusta. Jatkuvasti Suomen tyytyväisimpien vakuutusyhtiöiden joukossa.',
   longDescription:
     'Turva on vuonna 1910 perustettu keskinäinen vakuutusyhtiö, joka on historiallisesti liittynyt suomalaiseen ammattiliikkeeseen. Turva on tunnettu reilusta asiakaspalvelusta ja läpinäkyvästä hinnoittelusta. Yhtiö on pienestä koostaan huolimatta jatkuvasti Suomen asiakastyytyväisimpien vakuuttajien joukossa — usein top 3:ssa. Turva tarjoaa keskeiset henkilövakuutukset kilpailukykyiseen hintaan ja panostaa erityisesti korvausten sujuvuuteen. Turvan filosofia on, että vakuuttamisen tulee olla reilua ja asiakaslähtöistä.',
-  logo: '/logos/turva.svg',
   color: '#009639',
   satisfaction: 8.6,
   claimProcessRating: 8.8,
@@ -1485,7 +1480,7 @@ const turvaProducts: InsuranceProduct[] = [
       'Verkkopalvelu yksinkertaisempi kuin isoilla kilpailijoilla',
     ],
     suitableFor: ['Ammattiliiton jäsenet', 'Hintavertailijat', 'Yksinkertaista vakuutusta hakevat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-04-01',
   },
   {
     id: 'turva-auto-tayskasko',
@@ -1517,7 +1512,7 @@ const turvaProducts: InsuranceProduct[] = [
       'Ei niin laajaa lisäturvavalintaa kuin isoilla kilpailijoilla',
     ],
     suitableFor: ['Reilua palvelua arvostavat', 'Ammattiliiton jäsenet'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-04-01',
   },
   {
     id: 'turva-home-standard',
@@ -1548,7 +1543,7 @@ const turvaProducts: InsuranceProduct[] = [
       'Ei rikkoutumisturvaa perustasossa',
     ],
     suitableFor: ['Yksinkertaista kotivakuutusta hakevat', 'Ammattiliiton jäsenet'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-04-01',
   },
   {
     id: 'turva-travel-standard',
@@ -1575,7 +1570,7 @@ const turvaProducts: InsuranceProduct[] = [
       'Matkatavarakatto matala',
     ],
     suitableFor: ['Satunnaisesti matkustavat', 'Budjettimatkailijat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-04-01',
   },
 ];
 
@@ -1592,7 +1587,7 @@ const pohjantahti: InsuranceProvider = {
   shortName: 'Pohjantähti',
   founded: 1895,
   ownership: 'Keskinäinen vakuutusyhtiö',
-  marketShare: 2.5,
+  marketShare: 2.3,
   size: 'small',
   headquarters: 'Hämeenlinna',
   employeeCount: '~200',
@@ -1602,7 +1597,6 @@ const pohjantahti: InsuranceProvider = {
     'Perinteikäs keskinäinen vakuutusyhtiö, joka on erityisen vahva Keski-Suomessa ja Pohjanmaalla. Tunnetaan henkilökohtaisesta palvelusta ja maatilavakuuttamisen osaamisesta.',
   longDescription:
     'Pohjantähti on vuonna 1895 perustettu keskinäinen vakuutusyhtiö, joka toimii erityisesti Keski-Suomessa ja Pohjanmaalla. Yhtiö on tunnettu henkilökohtaisesta palvelusta ja paikallisesta asiantuntemuksesta. Pohjantähdellä on vahva osaaminen maatila- ja metsävakuutuksissa, mutta se tarjoaa myös kattavan valikoiman henkilövakuutuksia. Pienenä yhtiönä Pohjantähti pystyy tarjoamaan joustavaa ja henkilökohtaista palvelua, jota suuret kilpailijat eivät voi tarjota.',
-  logo: '/logos/pohjantahti.svg',
   color: '#003399',
   satisfaction: 8.0,
   claimProcessRating: 8.0,
@@ -1677,7 +1671,7 @@ const pohjantahtiProducts: InsuranceProduct[] = [
       'Verkko-osto rajoitetumpi kuin isoilla kilpailijoilla',
     ],
     suitableFor: ['Keski-Suomen ja Pohjanmaan asukkaat', 'Hintaherkät'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-14',
   },
   {
     id: 'pohjantahti-auto-tayskasko',
@@ -1709,7 +1703,7 @@ const pohjantahtiProducts: InsuranceProduct[] = [
       'Pienemmät lisäturvamahdollisuudet kuin isoilla kilpailijoilla',
     ],
     suitableFor: ['Paikallista palvelua arvostavat', 'Maaseudun autoilijat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-14',
   },
   {
     id: 'pohjantahti-home-standard',
@@ -1738,7 +1732,7 @@ const pohjantahtiProducts: InsuranceProduct[] = [
       'Lisäturvat rajoitetumpia',
     ],
     suitableFor: ['Budjettitietoiset', 'Pohjantähden toiminta-alueen asukkaat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-14',
   },
   {
     id: 'pohjantahti-pet-dog',
@@ -1764,7 +1758,7 @@ const pohjantahtiProducts: InsuranceProduct[] = [
       'Ei vastuuvakuutusta lemmikille',
     ],
     suitableFor: ['Edullista lemmikkivakuutusta hakevat', 'Maatilojen eläinten omistajat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-14',
   },
 ];
 
@@ -1781,7 +1775,7 @@ const popVakuutus: InsuranceProvider = {
   shortName: 'POP',
   founded: 2012,
   ownership: 'Suomen Vahinkovakuutus Oy (LähiTapiolan enemmistöomistus)',
-  marketShare: 2.5,
+  marketShare: 2.3,
   size: 'small',
   headquarters: 'Turku',
   employeeCount: '~120',
@@ -1791,7 +1785,6 @@ const popVakuutus: InsuranceProvider = {
     'Suomen ensimmäinen täysin digitaalinen vakuutusyhtiö, perustettu 2012. Tunnettu edullisista hinnoistaan ja erinomaisesta asiakastyytyväisyydestä (9,1/10). Markkinoiden nopeimmin kasvava vakuuttaja.',
   longDescription:
     'POP Vakuutus on Suomen ensimmäinen täysin digitaalinen vakuutusyhtiö, joka perustettiin vuonna 2012. POP toimii kokonaan verkossa ilman konttoreita, mikä mahdollistaa edullisen hinnoittelun. Yhtiö on kasvanut nopeasti ja saavuttanut yli 200 000 asiakasta. POP:n asiakastyytyväisyys on huippuluokkaa: 9,1/10, joka on alan korkein Suomessa. LähiTapiola hankki 70 % POP:n emoyhtiöstä, mutta POP jatkaa itsenäisenä digitaalisena brändinä. POP on erityisen suosittu nuorten ja ensivakuutuksen ottajien keskuudessa.',
-  logo: '/logos/pop.svg',
   color: '#FF1493',
   satisfaction: 9.1,
   claimProcessRating: 8.3,
@@ -1878,7 +1871,7 @@ const popProducts: InsuranceProduct[] = [
       'Vain verkkopalvelu — ei konttoreita',
     ],
     suitableFor: ['Edullisinta hintaa hakevat', 'Nuoret kuljettajat', 'Digitaalisesti taitavat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-04-03',
   },
   {
     id: 'pop-auto-osakasko',
@@ -1909,7 +1902,7 @@ const popProducts: InsuranceProduct[] = [
       'Ei kolarivahinkoja',
     ],
     suitableFor: ['Vanhempien autojen omistajat', 'Budjettitietoiset'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-04-03',
   },
   {
     id: 'pop-auto-tayskasko',
@@ -1944,7 +1937,7 @@ const popProducts: InsuranceProduct[] = [
       'Ei konttoripalvelua',
     ],
     suitableFor: ['Hintaherkät autoilijat', 'Nuoret kuljettajat', 'Ensimmäisen auton ostajat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-04-03',
   },
   {
     id: 'pop-home-standard',
@@ -1977,7 +1970,7 @@ const popProducts: InsuranceProduct[] = [
       'Suppea lisäturvavalikoima',
     ],
     suitableFor: ['Budjettitietoiset', 'Vuokra-asukkaat', 'Opiskelijat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-04-03',
   },
   {
     id: 'pop-travel-standard',
@@ -2004,7 +1997,7 @@ const popProducts: InsuranceProduct[] = [
       'Matkatavarakatto matala',
     ],
     suitableFor: ['Budjettimatkailijat', 'Satunnaisesti matkustavat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-04-03',
   },
   {
     id: 'pop-pet-dog',
@@ -2032,7 +2025,7 @@ const popProducts: InsuranceProduct[] = [
       'Suppea turva verrattuna kalliimpiin vaihtoehtoihin',
     ],
     suitableFor: ['Edullista perusturvaa hakevat', 'Ensimmäisen lemmikkivakuutuksen ottajat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-04-03',
   },
 ];
 
@@ -2049,7 +2042,7 @@ const aktia: InsuranceProvider = {
   shortName: 'Aktia',
   founded: 1991,
   ownership: 'Aktia Pankki Oyj (pörssiyhtiö)',
-  marketShare: 1.0,
+  marketShare: 0.8,
   size: 'small',
   headquarters: 'Helsinki',
   employeeCount: '~100 (vakuutus)',
@@ -2059,7 +2052,6 @@ const aktia: InsuranceProvider = {
     'Aktia Pankin vakuutusyhtiö, joka palvelee erityisesti ruotsinkielistä rannikko-Suomea. Tarjoaa suppean mutta laadukkaan vakuutusvalikoiman pankkipalveluiden rinnalla.',
   longDescription:
     'Aktia Vakuutus on osa Aktia Pankki -konsernia, joka on suomalais-ruotsalainen pankkikonserni. Aktian vakuutuspalvelut keskittyvät erityisesti rannikko-Suomen ruotsinkielisille alueille (Pohjanmaa, Turunmaa, Uusimaa). Tuotevalikoima on suppeampi kuin isoilla kilpailijoilla, mutta pankkipalveluiden integraatio tarjoaa synergiaetuja. Aktian vahvuutena on pankki-vakuutusintegraatio ja kaksikielinen palvelu (suomi/ruotsi).',
-  logo: '/logos/aktia.svg',
   color: '#C80064',
   satisfaction: 7.4,
   claimProcessRating: 7.0,
@@ -2136,7 +2128,7 @@ const aktiaProducts: InsuranceProduct[] = [
       'Suppeampi valikoima lisäturvia',
     ],
     suitableFor: ['Aktian pankkiasiakkaat', 'Rannikko-Suomen asukkaat', 'Ruotsinkieliset asiakkaat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-22',
   },
   {
     id: 'aktia-travel-standard',
@@ -2162,7 +2154,7 @@ const aktiaProducts: InsuranceProduct[] = [
       'Ei erotu kilpailijoista erityisesti',
     ],
     suitableFor: ['Aktian asiakkaat', 'Perusmatkavakuutusta hakevat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-22',
   },
   {
     id: 'aktia-life-standard',
@@ -2185,7 +2177,7 @@ const aktiaProducts: InsuranceProduct[] = [
       'Korvaussumman yläraja matalampi',
     ],
     suitableFor: ['Asuntolainanottajat', 'Aktian pankkiasiakkaat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-22',
   },
   {
     id: 'aktia-accident-standard',
@@ -2210,7 +2202,7 @@ const aktiaProducts: InsuranceProduct[] = [
       'Korvauskatot matalampia kuin kilpailijoilla',
     ],
     suitableFor: ['Aktian asiakkaat', 'Perus tapaturmaturvaa hakevat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-22',
   },
 ];
 
@@ -2227,7 +2219,7 @@ const alandia: InsuranceProvider = {
   shortName: 'Alandia',
   founded: 1938,
   ownership: 'Alandia-konserni (Ahvenanmaa)',
-  marketShare: 0.8,
+  marketShare: 0.7,
   size: 'niche',
   headquarters: 'Maarianhamina, Ahvenanmaa',
   employeeCount: '~150',
@@ -2237,7 +2229,6 @@ const alandia: InsuranceProvider = {
     'Ahvenanmaalainen vakuutusyhtiö, joka on erikoistunut merivakuutuksiin ja palvelee erityisesti saaristoalueiden ja ranniikon asukkaita. Vahva niche-vakuuttaja vene- ja merenkulkuvakuutuksissa.',
   longDescription:
     'Alandia on vuonna 1938 perustettu ahvenanmaalainen vakuutusyhtiö, joka on erikoistunut erityisesti merivakuutuksiin (veneet, laivat, merenkulku). Yhtiö tarjoaa myös henkilövakuutuksia Ahvenanmaalla ja rannikkoalueilla. Alandia tunnetaan merivakuutusten erikoisosaamisestaan ja on markkinajohtaja venevakuutuksissa Suomessa ja Pohjoismaissa. Henkilövakuutusten osalta Alandia on niche-toimija, mutta tarjoaa kilpailukykyisiä tuotteita toiminta-alueellaan.',
-  logo: '/logos/alandia.svg',
   color: '#00529B',
   satisfaction: 7.7,
   claimProcessRating: 7.5,
@@ -2315,7 +2306,7 @@ const alandiaProducts: InsuranceProduct[] = [
       'Suppea lisäturvavalikoima',
     ],
     suitableFor: ['Ahvenanmaan asukkaat', 'Saaristolaiset', 'Rannikolla asuvat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-28',
   },
   {
     id: 'alandia-travel-standard',
@@ -2341,7 +2332,7 @@ const alandiaProducts: InsuranceProduct[] = [
       'Ei erityisen kilpailukykyinen manner-Suomessa',
     ],
     suitableFor: ['Saaristolaiset', 'Lauttaliikenteen käyttäjät'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-28',
   },
   {
     id: 'alandia-accident-standard',
@@ -2366,7 +2357,7 @@ const alandiaProducts: InsuranceProduct[] = [
       'Suppea verrattuna isojen yhtiöiden tarjontaan',
     ],
     suitableFor: ['Veneilijät ja merenkävijät', 'Ahvenanmaan asukkaat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-03-28',
   },
 ];
 
@@ -2383,7 +2374,7 @@ const saastopankki: InsuranceProvider = {
   shortName: 'Sp Vakuutus',
   founded: 2015,
   ownership: 'Säästöpankkiliitto (säästöpankkien yhteenliittymä)',
-  marketShare: 0.9,
+  marketShare: 0.7,
   size: 'small',
   headquarters: 'Espoo',
   employeeCount: '~60',
@@ -2393,7 +2384,6 @@ const saastopankki: InsuranceProvider = {
     'Säästöpankkien vakuutusyhtiö, joka tarjoaa henkilövakuutuksia säästöpankkien asiakkaille. Uusi ja kasvava toimija, joka yhdistää pankki- ja vakuutuspalvelut.',
   longDescription:
     'Säästöpankki Vakuutus on suhteellisen uusi toimija Suomen vakuutusmarkkinoilla. Se perustettiin palvelemaan säästöpankkien asiakkaita vakuutuspalveluilla. Säästöpankit ovat Suomen vanhin pankkiryhmä (perustettu 1822) ja niillä on vahva paikallinen läsnäolo erityisesti pienissä kaupungeissa. Vakuutusliiketoiminta on vielä kasvuvaiheessa ja tuotevalikoima suppeampi kuin isoilla kilpailijoilla, mutta pankkiintegraatio tuo lisäarvoa olemassa oleville säästöpankkien asiakkaille.',
-  logo: '/logos/saastopankki.svg',
   color: '#00A0E3',
   satisfaction: 7.3,
   claimProcessRating: 7.0,
@@ -2469,7 +2459,7 @@ const saastopankkiProducts: InsuranceProduct[] = [
       'Ei erityisen kilpailukykyinen hinta',
     ],
     suitableFor: ['Säästöpankin asiakkaat', 'Paikallista palvelua arvostavat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-04-05',
   },
   {
     id: 'saastopankki-travel-standard',
@@ -2495,7 +2485,7 @@ const saastopankkiProducts: InsuranceProduct[] = [
       'Matala matkatavarakatto',
     ],
     suitableFor: ['Säästöpankin asiakkaat', 'Satunnaisesti matkustavat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-04-05',
   },
   {
     id: 'saastopankki-life-standard',
@@ -2518,7 +2508,7 @@ const saastopankkiProducts: InsuranceProduct[] = [
       'Matalampi korvaussumman yläraja',
     ],
     suitableFor: ['Asuntolainanottajat säästöpankeissa', 'Edullista henkivakuutusta hakevat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-04-05',
   },
   {
     id: 'saastopankki-accident-standard',
@@ -2543,7 +2533,7 @@ const saastopankkiProducts: InsuranceProduct[] = [
       'Matalahkot korvauskatot',
     ],
     suitableFor: ['Säästöpankin asiakkaat', 'Edullista tapaturmaturvaa hakevat'],
-    lastVerified: '2026-03-15',
+    lastVerified: '2026-04-05',
   },
 ];
 

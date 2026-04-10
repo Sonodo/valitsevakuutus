@@ -24,6 +24,7 @@ interface ProviderEstimate {
   estimated: number;
   highlights: string[];
   isAffiliate: boolean;
+  affiliateUrl?: string;
   satisfaction: number;
 }
 
@@ -87,6 +88,7 @@ export default function HomeCalculator() {
         estimated: Math.round(baseEstimate * varianceFactor),
         highlights,
         isAffiliate: provider.isAffiliate,
+        affiliateUrl: provider.affiliateUrl,
         satisfaction: provider.satisfaction,
       };
     });
@@ -400,13 +402,25 @@ export default function HomeCalculator() {
                         {formatCurrency(Math.round(result.estimated / 12))}/kk
                       </div>
                     </div>
-                    <Link
-                      href={`/vakuutusyhtiot/${result.providerSlug}`}
-                      className="flex min-h-[44px] items-center gap-1.5 rounded-lg bg-teal px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-teal-dark whitespace-nowrap"
-                    >
-                      Katso lisää
-                      <ExternalLink className="h-3.5 w-3.5" />
-                    </Link>
+                    {result.isAffiliate && result.affiliateUrl ? (
+                      <a
+                        href={result.affiliateUrl}
+                        target="_blank"
+                        rel="sponsored nofollow noopener"
+                        className="flex min-h-[44px] items-center gap-1.5 rounded-lg bg-teal px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-teal-dark whitespace-nowrap"
+                      >
+                        Siirry yhtiöön
+                        <ExternalLink className="h-3.5 w-3.5" />
+                      </a>
+                    ) : (
+                      <Link
+                        href={`/vakuutusyhtiot/${result.providerSlug}`}
+                        className="flex min-h-[44px] items-center gap-1.5 rounded-lg bg-teal px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-teal-dark whitespace-nowrap"
+                      >
+                        Katso lisää
+                        <ExternalLink className="h-3.5 w-3.5" />
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>

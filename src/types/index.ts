@@ -34,7 +34,6 @@ export interface InsuranceProvider {
   website: string;
   description: string;
   longDescription: string;
-  logo: string;
   color: string;
   satisfaction: number; // 0-10 scale
   claimProcessRating: number; // 0-10
