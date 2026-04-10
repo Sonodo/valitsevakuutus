@@ -6,7 +6,7 @@ const VALITSE_NETWORK_LINKS = [
   { label: 'Valitse.fi', description: 'Vertaa ja valitse', href: 'https://valitse.fi' },
   { label: 'Valitse Sähkö', description: 'Sähkövertailu', href: 'https://valitsesahko.fi' },
   { label: 'Valitse Laina', description: 'Lainavertailu', href: 'https://valitselaina.fi' },
-  { label: 'Valitse Puhelin', description: 'Puhelinliittymät', href: 'https://valitsepuhelin.fi' },
+  { label: 'Valitse Liittymä', description: 'Liittymävertailu', href: 'https://valitseliittyma.fi' },
 ];
 
 const CROSS_PRODUCT_LINKS = [
