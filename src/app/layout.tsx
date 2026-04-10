@@ -5,7 +5,7 @@ import CookieConsent from '@/components/layout/CookieConsent';
 import GoogleAnalytics from '@/components/seo/GoogleAnalytics';
 import './globals.css';
 
-const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || '';
+const CLARITY_ID = process.env.NODE_ENV === 'production' ? 'w9nc2vecgl' : '';
 
 export const metadata: Metadata = {
   title: {
