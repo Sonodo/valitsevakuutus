@@ -262,7 +262,7 @@ export default function AutoCalculator() {
               >
                 {Array.from({ length: 14 }, (_, i) => (
                   <option key={i} value={i}>
-                    S{i} — {Math.min(i * 5, 70)} % alennus
+                    S{i} — {i < 13 ? i * 5 : 70} % alennus
                     {i === 0 ? ' (ei bonusta)' : i === 13 ? ' (maksimi)' : ''}
                   </option>
                 ))}

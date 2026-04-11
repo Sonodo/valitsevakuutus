@@ -58,7 +58,7 @@ Valitse Vakuutus (valitsevakuutus.fi) is a Finnish insurance comparison platform
 All content is in Finnish (fi). The site targets Finnish consumers.
 
 ## Contact
-info@valitsevakuutus.fi
+https://valitsevakuutus.fi/yhteystiedot
 `;
 
   return new Response(content, {

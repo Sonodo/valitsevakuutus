@@ -75,8 +75,7 @@ export default function GuidesListingPage() {
                   </p>
 
                   {/* Meta */}
-                  <div className="flex items-center justify-between text-xs text-gray-400">
-                    <span>{formatDate(guide.publishedAt)}</span>
+                  <div className="flex items-center justify-end text-xs text-gray-400">
                     <span>{guide.readTime} min lukuaika</span>
                   </div>
                 </div>

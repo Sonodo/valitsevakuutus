@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 import { blogPosts } from '@/data/blog-posts';
 
-export const alt = 'Blogi — Valitse Vakuutus';
+export const alt = 'Artikkelit — Valitse Vakuutus';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -25,16 +25,9 @@ export default async function Image({
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
 
-  const title = post?.title ?? 'Blogi';
+  const title = post?.title ?? 'Artikkelit';
   const category = post ? (categoryLabels[post.category] ?? post.category) : '';
   const readTime = post ? `${post.readTime} min lukuaika` : '';
-  const date = post
-    ? new Date(post.publishedAt).toLocaleDateString('fi-FI', {
-        day: 'numeric',
-        month: 'long',
-        year: 'numeric',
-      })
-    : '';
 
   return new ImageResponse(
     (
@@ -119,7 +112,7 @@ export default async function Image({
               marginLeft: '4px',
             }}
           >
-            / Blogi
+            / Artikkelit
           </span>
         </div>
 
@@ -195,8 +188,8 @@ export default async function Image({
             }}
           />
 
-          {/* Date */}
-          {date && (
+          {/* Read time */}
+          {readTime && (
             <p
               style={{
                 color: 'rgba(255,255,255,0.6)',
@@ -204,7 +197,7 @@ export default async function Image({
                 margin: 0,
               }}
             >
-              {date}
+              {readTime}
             </p>
           )}
         </div>

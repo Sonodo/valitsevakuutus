@@ -1,73 +1,90 @@
+'use client';
+
 import Link from 'next/link';
 import type { LucideProps } from 'lucide-react';
-import {
-  Car,
-  Home,
-  Plane,
-  PawPrint,
-  Heart,
-  ShieldPlus,
-  Baby,
-} from 'lucide-react';
-import { INSURANCE_TYPES } from '@/lib/constants';
+import { Car, Home, Plane, PawPrint, Heart, ArrowRight } from 'lucide-react';
+import ScrollReveal from '@/components/ScrollReveal';
 
-const iconMap: Record<string, React.ComponentType<LucideProps>> = {
-  Car,
-  Home,
-  Plane,
-  PawPrint,
-  Heart,
-  ShieldPlus,
-  Baby,
-};
+interface InsuranceCard {
+  title: string;
+  description: string;
+  href: string;
+  Icon: React.ComponentType<LucideProps>;
+}
+
+const CARDS: InsuranceCard[] = [
+  {
+    title: 'Autovakuutus',
+    description: 'Vertaa liikenne- ja kaskovakuutuksia 10 yhtiolta.',
+    href: '/autovakuutus',
+    Icon: Car,
+  },
+  {
+    title: 'Kotivakuutus',
+    description: 'Loyda kattava suoja kodillesi edullisesti.',
+    href: '/kotivakuutus',
+    Icon: Home,
+  },
+  {
+    title: 'Matkavakuutus',
+    description: 'Matkusta turvallisesti, vertaile vakuutukset.',
+    href: '/matkavakuutus',
+    Icon: Plane,
+  },
+  {
+    title: 'Lemmikkivakuutus',
+    description: 'Elainlaakarikulut hallintaan vakuutuksella.',
+    href: '/lemmikkivakuutus',
+    Icon: PawPrint,
+  },
+  {
+    title: 'Henkivakuutus',
+    description: 'Turvaa perheesi talous henkivakuutuksella.',
+    href: '/henkivakuutus',
+    Icon: Heart,
+  },
+];
 
 export default function InsuranceTypeCards() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mb-10 text-center">
-        <h2 className="text-2xl font-bold text-navy sm:text-3xl">
-          Valitse vakuutuslaji
-        </h2>
-        <p className="mt-3 text-gray-600">
-          Vertaa hintoja ja ehtoja kaikissa vakuutuslajeissa
-        </p>
-      </div>
+    <section className="bg-background py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <ScrollReveal>
+          <div className="mb-12 text-center">
+            <h2 className="section-title">Mita vakuutusta etsit?</h2>
+            <p className="section-subtitle">
+              Vertaa hintoja ja ehtoja kaikissa vakuutuslajeissa
+            </p>
+          </div>
+        </ScrollReveal>
 
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-        {INSURANCE_TYPES.map((type) => {
-          const Icon = iconMap[type.icon];
-          return (
-            <Link
-              key={type.type}
-              href={`/${type.slug}`}
-              className="group rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-all hover:border-teal hover:shadow-md"
-            >
-              <div
-                className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg"
-                style={{ backgroundColor: `${type.color}15` }}
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
+          {CARDS.map((card, i) => (
+            <ScrollReveal key={card.href} delay={i * 100}>
+              <Link
+                href={card.href}
+                className="group block rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:ring-accent/30"
               >
-                {Icon && (
-                  <Icon
-                    className="h-6 w-6"
-                    color={type.color}
-                  />
-                )}
-              </div>
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent-50">
+                  <card.Icon className="h-6 w-6 text-accent" />
+                </div>
 
-              <h3 className="text-sm font-semibold text-navy group-hover:text-teal sm:text-base">
-                {type.name}
-              </h3>
+                <h3 className="text-base font-bold text-foreground group-hover:text-accent">
+                  {card.title}
+                </h3>
 
-              <p className="mt-1 text-xs text-gray-500 sm:text-sm">
-                {type.description}
-              </p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-500">
+                  {card.description}
+                </p>
 
-              <p className="mt-3 text-xs font-medium text-gray-400">
-                {type.averagePrice}
-              </p>
-            </Link>
-          );
-        })}
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-accent opacity-0 transition-opacity group-hover:opacity-100">
+                  Vertaile
+                  <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
+            </ScrollReveal>
+          ))}
+        </div>
       </div>
     </section>
   );

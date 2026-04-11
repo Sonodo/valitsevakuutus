@@ -43,7 +43,7 @@ export default function ProvidersPage() {
             </h1>
             <p className="text-lg text-white/80 sm:text-xl">
               Vertailemme {providers.length} Suomen suurinta vakuutusyhtiötä.
-              Puolueeton arvio jokaisesta yhtiöstä — vahvuudet, heikkoudet ja asiakastyytyväisyys.
+              Kattava arvio jokaisesta yhtiöstä — vahvuudet, heikkoudet ja asiakastyytyväisyys.
             </p>
           </div>
         </section>

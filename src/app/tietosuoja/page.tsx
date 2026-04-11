@@ -41,8 +41,6 @@ export default function PrivacyPolicyPage() {
               <br />
               Helsinki, Suomi
               <br />
-              Sähköposti: info@valitsevakuutus.fi
-              <br />
               Verkkosivusto: {SITE_URL}
             </p>
 
@@ -183,8 +181,8 @@ export default function PrivacyPolicyPage() {
               </li>
             </ul>
             <p>
-              Voit käyttää oikeuksiasi lähettämällä sähköpostia osoitteeseen{' '}
-              <a href="mailto:info@valitsevakuutus.fi">info@valitsevakuutus.fi</a>.
+              Voit käyttää oikeuksiasi ottamalla yhteyttä{' '}
+              <a href="/yhteystiedot" className="text-teal underline">yhteydenottosivullamme</a>.
               Vastaamme pyyntöihin 30 päivän kuluessa.
             </p>
 
@@ -240,9 +238,8 @@ export default function PrivacyPolicyPage() {
 
             <h2>12. Yhteystiedot</h2>
             <p>
-              Tietosuojaan liittyvissä kysymyksissä ota yhteyttä:
-              <br />
-              <a href="mailto:info@valitsevakuutus.fi">info@valitsevakuutus.fi</a>
+              Tietosuojaan liittyvissä kysymyksissä ota yhteyttä{' '}
+              <a href="/yhteystiedot" className="text-teal underline">yhteydenottosivullamme</a>.
             </p>
           </div>
         </div>

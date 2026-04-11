@@ -28,7 +28,7 @@ export async function generateMetadata({
 
   return {
     title: `${provider.name} — Arvio, tuotteet ja hinnat 2026`,
-    description: `${provider.name} vakuutusvertailu: tuotteet, hinnat, asiakastyytyväisyys ja puolueeton arvio. ${provider.description}`,
+    description: `${provider.name} vakuutusvertailu: tuotteet, hinnat, asiakastyytyväisyys ja kattava arvio. ${provider.description}`,
     alternates: {
       canonical: `${SITE_URL}/vakuutusyhtiot/${provider.slug}`,
     },

@@ -40,10 +40,7 @@ export default function BlogCard({ post }: BlogCardProps) {
       </p>
 
       {/* Meta */}
-      <div className="mt-4 flex items-center justify-between border-t border-gray-100 pt-3">
-        <span className="text-xs text-gray-400">
-          {formatDate(post.publishedAt)}
-        </span>
+      <div className="mt-4 flex items-center justify-end border-t border-gray-100 pt-3">
         {post.tags.length > 0 && (
           <div className="flex gap-1.5">
             {post.tags.slice(0, 2).map((tag) => (

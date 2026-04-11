@@ -167,17 +167,7 @@ export default async function GuidePage({
                 <div className="flex items-center gap-4 text-sm text-gray-500">
                   <span>{guide.author}</span>
                   <span>|</span>
-                  <time dateTime={guide.publishedAt}>
-                    {formatDateLong(guide.publishedAt)}
-                  </time>
-                  <span>|</span>
                   <span>{guide.readTime} min lukuaika</span>
-                  {guide.updatedAt && (
-                    <>
-                      <span>|</span>
-                      <span>Päivitetty: {formatDateLong(guide.updatedAt)}</span>
-                    </>
-                  )}
                 </div>
               </header>
 

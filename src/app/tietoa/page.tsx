@@ -8,7 +8,7 @@ import { SITE_URL, SITE_NAME } from '@/lib/constants';
 export const metadata: Metadata = {
   title: 'Tietoa meistä — Kuka tekee Valitse Vakuutuksen?',
   description:
-    'Valitse Vakuutus on riippumaton vakuutusvertailupalvelu. Lue miten toimimme, miten ansaitsemme ja miksi voit luottaa meihin.',
+    'Valitse Vakuutus on kattava vakuutusvertailupalvelu. Lue miten toimimme, miten ansaitsemme ja miksi voit luottaa meihin.',
   alternates: {
     canonical: `${SITE_URL}/tietoa`,
   },
@@ -35,7 +35,7 @@ export default function AboutPage() {
           <div className="prose max-w-none">
             <h2>Mikä on {SITE_NAME}?</h2>
             <p>
-              {SITE_NAME} on riippumaton vakuutusvertailupalvelu, joka auttaa suomalaisia
+              {SITE_NAME} on kattava vakuutusvertailupalvelu, joka auttaa suomalaisia
               löytämään parhaan vakuutuksen omiin tarpeisiinsa. Vertailemme{' '}
               <strong>10 suurimman suomalaisen vakuutusyhtiön</strong> tuotteita ja hintoja
               yhdessä paikassa.
@@ -50,7 +50,7 @@ export default function AboutPage() {
             <p>
               Uskomme, että kuluttajien tulisi voida vertailla kaikkien yhtiöiden tuotteita
               yhdestä paikasta — mukaan lukien ne yhtiöt, jotka eivät maksa meille mitään.
-              Uskomme, että tämä on oikea tapa tehdä aidosti puolueetonta vertailua.
+              Uskomme, että tämä on oikea tapa tehdä kattavaa vertailua.
             </p>
 
             <h2>Miten ansaitsemme rahaa?</h2>
@@ -122,7 +122,7 @@ export default function AboutPage() {
                 ansaitsemme
               </li>
               <li>
-                <strong>Puolueettomuus:</strong> Vertailujärjestys perustuu dataan, ei
+                <strong>Avoimuus:</strong> Vertailujärjestys perustuu dataan, ei
                 maksettuihin sopimuksiin
               </li>
               <li>

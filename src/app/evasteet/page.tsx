@@ -238,13 +238,13 @@ export default function CookiePolicyPage() {
               <Link href="/tietosuoja" className="text-teal underline">
                 tietosuojaselosteestamme
               </Link>
-              . Evästeitä koskevissa kysymyksissä voit ottaa yhteyttä:{' '}
+              . Evästeitä koskevissa kysymyksissä voit ottaa yhteyttä{' '}
               <a
-                href="mailto:info@valitsevakuutus.fi"
+                href="/yhteystiedot"
                 className="text-teal underline"
               >
-                info@valitsevakuutus.fi
-              </a>
+                yhteydenottosivullamme
+              </a>.
             </p>
           </div>
         </div>

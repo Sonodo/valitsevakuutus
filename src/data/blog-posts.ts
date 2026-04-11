@@ -167,7 +167,7 @@ const autovakuutusVertailu2026: BlogPost = {
   <li>Älä vertaile pelkkää hintaa — kattavuus, korvauspalvelu ja bonusjärjestelmä ratkaisevat</li>
 </ul>
 
-<p>Käytä vertailutyökaluamme löytääksesi juuri sinulle sopivan autovakuutuksen. Vertailu on aina ilmaista ja puolueetonta.</p>
+<p>Käytä vertailutyökaluamme löytääksesi juuri sinulle sopivan autovakuutuksen. Vertailu on aina ilmaista ja kattavaa.</p>
 `,
 };
 

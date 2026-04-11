@@ -58,7 +58,7 @@ export default async function BlogArticlePage({
 
   const breadcrumbs = [
     { label: 'Etusivu', href: '/' },
-    { label: 'Blogi', href: '/blogi' },
+    { label: 'Artikkelit', href: '/blogi' },
     { label: post.title, href: `/blogi/${post.slug}` },
   ];
 
@@ -154,17 +154,7 @@ export default async function BlogArticlePage({
                 <div className="flex items-center gap-4 text-sm text-gray-500">
                   <span>{post.author}</span>
                   <span>|</span>
-                  <time dateTime={post.publishedAt}>
-                    {formatDateLong(post.publishedAt)}
-                  </time>
-                  {post.updatedAt && (
-                    <>
-                      <span>|</span>
-                      <span>
-                        Päivitetty: {formatDateLong(post.updatedAt)}
-                      </span>
-                    </>
-                  )}
+                  <span>{post.readTime} min lukuaika</span>
                 </div>
               </header>
 

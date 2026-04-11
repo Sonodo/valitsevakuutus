@@ -21,7 +21,7 @@ interface YearProjection {
 const BONUS_TABLE = Array.from({ length: 14 }, (_, i) => ({
   class: i,
   label: `S${i}`,
-  discount: Math.min(i * 5, 70),
+  discount: i < 13 ? i * 5 : 70,
 }));
 
 // After a claim, bonus typically drops 3-4 classes
@@ -42,7 +42,7 @@ export default function BonusCalculator() {
   };
 
   // Current discount
-  const currentDiscount = Math.min(formData.currentBonusClass * 5, 70);
+  const currentDiscount = formData.currentBonusClass < 13 ? formData.currentBonusClass * 5 : 70;
   const currentPremium = Math.round(formData.basePremium * (1 - currentDiscount / 100));
 
   // 10-year projection WITHOUT claims
@@ -50,7 +50,7 @@ export default function BonusCalculator() {
     const years: YearProjection[] = [];
     let bc = formData.currentBonusClass;
     for (let y = 0; y <= 10; y++) {
-      const discount = Math.min(bc * 5, 70);
+      const discount = bc < 13 ? bc * 5 : 70;
       years.push({
         year: y,
         bonusClass: bc,
@@ -72,7 +72,7 @@ export default function BonusCalculator() {
       } else if (y > 1) {
         bc = Math.min(13, bc + 1);
       }
-      const discount = Math.min(bc * 5, 70);
+      const discount = bc < 13 ? bc * 5 : 70;
       years.push({
         year: y,
         bonusClass: bc,

@@ -9,7 +9,7 @@ import { SITE_URL } from '@/lib/constants';
 export const metadata: Metadata = {
   title: 'Vertaa vakuutuksia — Ilmainen vakuutuslaskuri',
   description:
-    'Vertaa vakuutuksia ilmaiseksi. Vakuutuslaskuri vertailee autovakuutuksia, kotivakuutuksia, matkavakuutuksia ja muita vakuutuksia 10 yhtiöltä. 100% puolueeton.',
+    'Vertaa vakuutuksia ilmaiseksi. Vakuutuslaskuri vertailee autovakuutuksia, kotivakuutuksia, matkavakuutuksia ja muita vakuutuksia 10 yhtiöltä. 100% ilmainen.',
   alternates: {
     canonical: `${SITE_URL}/vertailu`,
   },
@@ -56,7 +56,7 @@ export default function ComparisonPage() {
             </h1>
             <p className="text-lg text-white/80">
               Valitse vakuutustyyppi, kerro tarpeesi ja vertaa hintoja ja ehtoja.
-              Ilmainen ja puolueeton palvelu.
+              Ilmainen ja kattava palvelu.
             </p>
           </div>
         </section>

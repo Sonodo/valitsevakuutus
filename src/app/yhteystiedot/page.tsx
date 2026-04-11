@@ -56,13 +56,10 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-navy">Sähköposti</h3>
-                  <a
-                    href="mailto:info@valitsevakuutus.fi"
-                    className="text-teal hover:text-teal-dark"
-                  >
-                    info@valitsevakuutus.fi
-                  </a>
+                  <h3 className="font-semibold text-navy">Yhteydenotto</h3>
+                  <p className="text-teal">
+                    Yhteydenottolomake tulossa pian
+                  </p>
                   <p className="mt-1 text-sm text-gray-500">
                     Vastaamme yleensä 1–2 arkipäivän kuluessa.
                   </p>
@@ -116,14 +113,7 @@ export default function ContactPage() {
                   <h3 className="font-semibold text-navy">Yritysyhteistyö</h3>
                   <p className="text-sm text-gray-600">
                     Oletko vakuutusyhtiön edustaja tai kiinnostunut yhteistyöstä?
-                    Lähetä viesti osoitteeseen{' '}
-                    <a
-                      href="mailto:info@valitsevakuutus.fi"
-                      className="text-teal hover:text-teal-dark"
-                    >
-                      info@valitsevakuutus.fi
-                    </a>
-                    .
+                    Yhteydenottolomake on tulossa pian.
                   </p>
                 </div>
               </div>

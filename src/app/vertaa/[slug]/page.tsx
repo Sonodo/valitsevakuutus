@@ -124,7 +124,7 @@ export default async function ComparisonPage({
     },
     {
       question: `Voiko ${p1Name} ja ${p2Name} vakuutuksia vertailla verkossa?`,
-      answer: `Kyllä! Valitse Vakuutus tarjoaa ilmaisen ja puolueettoman vertailupalvelun, jossa voit vertailla ${p1Name} ja ${p2Name} vakuutuksia ominaisuuksien, hintojen ja asiakastyytyväisyyden perusteella.`,
+      answer: `Kyllä! Valitse Vakuutus tarjoaa ilmaisen ja kattavan vertailupalvelun, jossa voit vertailla ${p1Name} ja ${p2Name} vakuutuksia ominaisuuksien, hintojen ja asiakastyytyväisyyden perusteella.`,
     },
     {
       question: `Miten ${p1Name} ja ${p2Name} eroavat korvauspalvelussa?`,
@@ -449,7 +449,7 @@ export default async function ComparisonPage({
               Vertaa vakuutuksia ja säästä
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-white/90">
-              Löydä sopiva vakuutus juuri sinulle. Puolueeton vertailu 10 vakuutusyhtiön välillä.
+              Löydä sopiva vakuutus juuri sinulle. Kattava vertailu 10 vakuutusyhtiön välillä.
             </p>
             <Link
               href="/vertailu"

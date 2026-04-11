@@ -100,7 +100,7 @@ export function estimateAutoPremium(params: {
   else if (driverAge < 30) base *= 1.2;
 
   // Bonus discount (0-70%)
-  const bonusDiscount = Math.min(bonusClass * 5, 70) / 100;
+  const bonusDiscount = (bonusClass < 13 ? bonusClass * 5 : 70) / 100;
   base *= 1 - bonusDiscount;
 
   // Add kasko based on tier
@@ -136,8 +136,8 @@ export function estimateHomePremium(params: {
 
   // Age factor
   const age = new Date().getFullYear() - yearBuilt;
-  if (age > 50) base *= 1.3;
-  else if (age > 30) base *= 1.15;
+  if (age > 50) base *= 1.15;
+  else if (age > 30) base *= 1.08;
 
   // Contents value factor
   base += contentsValue * 0.002;

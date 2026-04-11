@@ -80,7 +80,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen bg-white text-gray-900 antialiased">
+      <body className="min-h-screen bg-background text-foreground antialiased">
         <GoogleAnalytics />
         {CLARITY_ID && (
           <>

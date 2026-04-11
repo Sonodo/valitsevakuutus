@@ -149,7 +149,7 @@ export default async function CityInsurancePage({
               Vakuutukset {city.nameInessive}
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80">
-              Vertaa vakuutuksia {city.nameInessive} ja löydä sopiva vakuutus sinulle. Puolueeton vertailu 10
+              Vertaa vakuutuksia {city.nameInessive} ja löydä sopiva vakuutus sinulle. Kattava vertailu 10
               vakuutusyhtiön välillä.
             </p>
           </div>
@@ -389,7 +389,7 @@ export default async function CityInsurancePage({
               Vertaa vakuutuksia {city.nameInessive}
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-white/90">
-              Löydä sopiva ja edullinen vakuutus {city.nameInessive}. Puolueeton vertailu 10 yhtiön välillä.
+              Löydä sopiva ja edullinen vakuutus {city.nameInessive}. Kattava vertailu 10 yhtiön välillä.
             </p>
             <Link
               href="/vertailu"

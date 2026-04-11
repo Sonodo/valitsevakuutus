@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 const breadcrumbs = [
   { label: 'Etusivu', href: '/' },
-  { label: 'Blogi', href: '/blogi' },
+  { label: 'Artikkelit', href: '/blogi' },
 ];
 
 const categoryLabels: Record<string, string> = {
@@ -82,8 +82,7 @@ export default function BlogListingPage() {
                   </p>
 
                   {/* Meta */}
-                  <div className="flex items-center justify-between text-xs text-gray-400">
-                    <span>{formatDate(post.publishedAt)}</span>
+                  <div className="flex items-center justify-end text-xs text-gray-400">
                     <span>{post.readTime} min lukuaika</span>
                   </div>
                 </div>

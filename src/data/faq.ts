@@ -18,7 +18,7 @@ export const generalFAQ: FAQItem[] = [
   {
     question: 'Miten vakuutusten vertailu toimii Valitse Vakuutuksessa?',
     answer:
-      'Vertailemme kaikkien kymmenen suomalaisen vakuutusyhtiön tuotteita avoimesti ja puolueettomasti. Hinta-arviot perustuvat julkisiin hintatietoihin ja vakuutuslaskureihin. Vertailussa huomioimme hinnan, kattavuuden, asiakastyytyväisyyden ja erityisehdot. Osa linkeistä on mainoslinkkejä, joista saamme pienen korvauksen — tämä ei vaikuta vertailujärjestykseen.',
+      'Vertailemme kaikkien kymmenen suomalaisen vakuutusyhtiön tuotteita avoimesti ja kattavasti. Hinta-arviot perustuvat julkisiin hintatietoihin ja vakuutuslaskureihin. Vertailussa huomioimme hinnan, kattavuuden, asiakastyytyväisyyden ja erityisehdot. Osa linkeistä on mainoslinkkejä, joista saamme pienen korvauksen — tämä ei vaikuta vertailujärjestykseen.',
   },
   {
     question: 'Maksaako vakuutusten vertailu jotain?',

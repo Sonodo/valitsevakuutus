@@ -15,7 +15,7 @@ import { SITE_URL, SITE_NAME } from '@/lib/constants';
 export const metadata: Metadata = {
   title: `Vertaa vakuutusyhtiöitä — Kaikki vakuutusyhtiövertailut | ${SITE_NAME}`,
   description:
-    'Vertaa Suomen vakuutusyhtiöitä keskenään. If vs Pohjola, LähiTapiola vs Fennia ja 18 muuta vertailua. Löydä sopiva vakuutusyhtiö puolueettomalla vertailulla.',
+    'Vertaa Suomen vakuutusyhtiöitä keskenään. If vs Pohjola, LähiTapiola vs Fennia ja 18 muuta vertailua. Löydä sopiva vakuutusyhtiö kattavalla vertailulla.',
   alternates: {
     canonical: `${SITE_URL}/vertaa`,
   },
@@ -69,7 +69,7 @@ export default function ComparisonIndexPage() {
               Vertaa vakuutusyhtiöitä
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80">
-              Puolueeton, yksityiskohtainen vertailu Suomen vakuutusyhtiöiden välillä. Vertaa
+              Kattava, yksityiskohtainen vertailu Suomen vakuutusyhtiöiden välillä. Vertaa
               hintoja, palvelua, korvauksia ja digitaalisia palveluita.
             </p>
           </div>

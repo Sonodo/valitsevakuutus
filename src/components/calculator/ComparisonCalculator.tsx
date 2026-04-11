@@ -344,7 +344,7 @@ function StepTravelDetails({
           <span className="text-sm font-medium text-gray-700">Sisältää peruutusturvan</span>
           <div className="mt-2 grid grid-cols-2 gap-3">
             {[
-              { value: 'yes', label: 'Kyll\u00e4' },
+              { value: 'yes', label: 'Kyllä' },
               { value: 'no', label: 'Ei' },
             ].map((opt) => (
               <button
@@ -541,7 +541,7 @@ function StepLifeDetails({
           <div className="mt-2 grid grid-cols-2 gap-3">
             {[
               { value: 'no', label: 'Ei' },
-              { value: 'yes', label: 'Kyll\u00e4' },
+              { value: 'yes', label: 'Kyllä' },
             ].map((opt) => (
               <button
                 key={opt.value}
@@ -1118,7 +1118,7 @@ export default function ComparisonCalculator() {
             onClick={() => setStep(step + 1)}
             className="inline-flex min-h-[44px] items-center gap-2 rounded-lg bg-teal px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-teal-dark"
           >
-            {step === 2 ? 'N\u00e4yt\u00e4 tulokset' : 'Seuraava'}
+            {step === 2 ? 'Näytä tulokset' : 'Seuraava'}
             <ArrowRight className="h-4 w-4" />
           </button>
         )}

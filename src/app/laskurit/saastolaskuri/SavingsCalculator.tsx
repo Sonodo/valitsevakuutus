@@ -46,7 +46,7 @@ export default function SavingsCalculator() {
       .map((provider) => {
         // Use price competitiveness to estimate relative pricing
         // More competitive providers (higher score) = lower prices
-        const competitivenessRatio = 1 - (provider.priceCompetitiveness - 5) * 0.06;
+        const competitivenessRatio = 1 + (provider.priceCompetitiveness - 7) * -0.04;
 
         const estimatedAuto = Math.round(formData.autoInsuranceCost * competitivenessRatio);
         const estimatedHome = Math.round(formData.homeInsuranceCost * competitivenessRatio);

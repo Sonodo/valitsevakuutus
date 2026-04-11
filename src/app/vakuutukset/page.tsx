@@ -276,7 +276,7 @@ export default function RegionalIndexPage() {
               Vertaa vakuutuksia omalla alueellasi
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-white/90">
-              Anna postinumerosi ja löydä sopiva vakuutus juuri sinulle. Puolueeton ja ilmainen vertailu.
+              Anna postinumerosi ja löydä sopiva vakuutus juuri sinulle. Kattava ja ilmainen vertailu.
             </p>
             <Link
               href="/vertailu"

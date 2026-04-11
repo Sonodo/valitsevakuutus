@@ -132,7 +132,7 @@ export const INSURANCE_TYPES: InsuranceTypeInfo[] = [
 
 export const BONUS_CLASSES = Array.from({ length: 14 }, (_, i) => ({
   class: i,
-  discount: Math.min(i * 5, 70), // 0% to 70% discount
+  discount: i < 13 ? i * 5 : 70, // 0% to 70% discount (S13 jumps to 70%)
   label: `S${i}${i === 0 ? ' (ei bonusta)' : i === 13 ? ' (maksimibonukset)' : ''}`,
 }));
 

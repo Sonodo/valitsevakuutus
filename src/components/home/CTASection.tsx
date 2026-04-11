@@ -1,33 +1,38 @@
+'use client';
+
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+import ScrollReveal from '@/components/ScrollReveal';
 
 export default function CTASection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-teal-dark to-teal">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute -right-10 -top-10 h-64 w-64 rounded-full bg-white blur-3xl" />
-        <div className="absolute -bottom-10 -left-10 h-64 w-64 rounded-full bg-amber blur-3xl" />
-      </div>
+    <section className="relative overflow-hidden bg-navy">
+      {/* Glow orbs */}
+      <div className="absolute left-1/3 top-0 h-64 w-64 rounded-full bg-accent-400/20 opacity-20 blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 h-48 w-48 rounded-full bg-accent-400/20 opacity-20 blur-3xl" />
 
-      <div className="relative mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8">
-        <h2 className="text-2xl font-extrabold text-white sm:text-3xl lg:text-4xl">
-          Valmis vertailemaan?
-        </h2>
-        <p className="mt-4 text-lg text-white/80">
-          Vertailemalla vakuutuksia voit löytää edullisemman vaihtoehdon.
-          Selvitä oma säästöpotentiaalisi.
-        </p>
+      <div className="relative mx-auto max-w-4xl px-4 py-20 text-center sm:px-6 sm:py-24 lg:px-8">
+        <ScrollReveal>
+          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+            Vertaa vakuutuksia helposti
+          </h2>
+          <p className="mt-4 text-lg text-white/60">
+            Vertailemalla vakuutuksia voit loytaa edullisemman vaihtoehdon.
+            Selvita oma saastopotentiaalisi.
+          </p>
 
-        <Link
-          href="/vertailu"
-          className="mt-8 inline-flex min-h-[44px] items-center rounded-xl bg-white px-8 py-3 text-base font-semibold text-teal-dark shadow-lg transition-all hover:bg-gray-50 hover:shadow-xl"
-        >
-          Aloita ilmainen vertailu nyt
-        </Link>
+          <Link
+            href="/vertailu"
+            className="btn btn-primary mt-8 min-h-[48px] px-8 text-base shadow-lg shadow-accent/25"
+          >
+            Aloita ilmainen vertailu
+            <ArrowRight className="h-5 w-5" />
+          </Link>
 
-        <p className="mt-4 text-sm text-white/60">
-          Ei rekisteröitymistä. Ei sitoutumista. 100 % ilmainen palvelu.
-        </p>
+          <p className="mt-5 text-sm text-white/40">
+            Ei rekisteroitymista. Ei sitoutumista. 100 % ilmainen palvelu.
+          </p>
+        </ScrollReveal>
       </div>
     </section>
   );

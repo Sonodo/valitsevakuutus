@@ -37,7 +37,7 @@ export default function TermsPage() {
           <div className="prose max-w-none">
             <h2>1. Palvelun kuvaus</h2>
             <p>
-              {SITE_NAME} (jäljempänä &quot;Palvelu&quot;) on riippumaton vakuutusten
+              {SITE_NAME} (jäljempänä &quot;Palvelu&quot;) on kattava vakuutusten
               vertailupalvelu, joka tarjoaa kuluttajille tietoa ja työkaluja
               vakuutusten vertailuun. Palvelu on saatavilla osoitteessa{' '}
               <Link href="/" className="text-teal underline">
@@ -207,14 +207,13 @@ export default function TermsPage() {
 
             <h2>10. Yhteystiedot</h2>
             <p>
-              Näihin ehtoihin liittyvissä kysymyksissä voit ottaa meihin yhteyttä
-              sähköpostitse:{' '}
+              Näihin ehtoihin liittyvissä kysymyksissä voit ottaa meihin yhteyttä{' '}
               <a
-                href="mailto:info@valitsevakuutus.fi"
+                href="/yhteystiedot"
                 className="text-teal underline"
               >
-                info@valitsevakuutus.fi
-              </a>
+                yhteydenottosivullamme
+              </a>.
             </p>
           </div>
         </div>
