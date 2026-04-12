@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronDown, Shield } from 'lucide-react';
+import Image from 'next/image';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { MAIN_NAV } from '@/lib/constants';
 import { UserMenu } from '@/components/auth/UserMenu';
 
@@ -14,13 +15,15 @@ export default function Header() {
     <header className="sticky top-0 z-50 glass-dark">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-accent-400 to-accent-600">
-            <Shield className="h-5 w-5 text-white" />
-          </div>
-          <span className="text-xl font-bold tracking-tight text-white">
-            Valitse<span className="text-accent-400">Vakuutus</span>
-          </span>
+        <Link href="/" className="flex items-center" aria-label="Valitse Vakuutus — Etusivu">
+          <Image
+            src="/logo.png"
+            alt="Valitse Vakuutus"
+            width={609}
+            height={191}
+            priority
+            className="h-9 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}

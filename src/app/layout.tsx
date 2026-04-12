@@ -35,9 +35,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE_URL,
   },
-  icons: {
-    icon: '/favicon.svg',
-  },
   verification: {
     google: 'txKlddizt2JX0hbBYELQWYtzxdWRnSzohDhFA6nrLuU',
   },
