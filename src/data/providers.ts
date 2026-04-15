@@ -1792,7 +1792,7 @@ const popVakuutus: InsuranceProvider = {
   onlineServiceRating: 9.0,
   priceCompetitiveness: 9.2,
   isAffiliate: true,
-  affiliateUrl: 'https://www.popvakuutus.fi',
+  affiliateUrl: 'https://go.popvakuutus.fi/t/t?a=1710920255&as=2066469901&t=2&tk=1',
   products: [],
   strengths: [
     'Kilpailukykyisiä hintoja digitaalisen toimintamallin ansiosta',
