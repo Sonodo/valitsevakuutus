@@ -1,4 +1,4 @@
-# Vakuutusvertailu — Development Guide
+# Valitse Vakuutus (valitsevakuutus.fi) — Development Guide
 
 ## What Is This
 Finnish insurance comparison platform. Transparent, multi-insurer comparison across auto, home, travel, pet, and life insurance from all major Finnish providers. The missing mega-vertical — insurance generates 54% of MoneySuperMarket's revenue but barely exists in Finland. Consumer-first: show real coverage differences, not just price. Built as a Vertailu Hub spoke from day one.

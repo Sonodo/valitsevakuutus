@@ -1,6 +1,6 @@
-# Vakuutusvertailu — Status
+# Valitse Vakuutus (valitsevakuutus.fi) — Status
 
-**Project**: Vakuutusvertailu — Finnish Insurance Comparison
+**Project**: Valitse Vakuutus — Finnish Insurance Comparison
 **Status**: LIVE at valitsevakuutus.fi
 **Health**: GREEN
 **Domain**: valitsevakuutus.fi (custom domain)
