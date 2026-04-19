@@ -6,7 +6,7 @@ export const SITE_NAME = 'Valitse Vakuutus';
 export const SITE_NAME_GENITIVE = 'Valitse Vakuutuksen';
 export const SITE_URL = 'https://valitsevakuutus.fi';
 export const SITE_DESCRIPTION =
-  'Vakuutusvertailupalvelu. Vertaa autovakuutuksia, kotivakuutuksia, matkavakuutuksia, lemmikkivakuutuksia ja henkivakuutuksia — Suomen merkittävimmät vakuutusyhtiöt yhdessä paikassa.';
+  'Valitse Vakuutus on vakuutusten vertailupalvelu. Vertaa autovakuutuksia, kotivakuutuksia, matkavakuutuksia, lemmikkivakuutuksia ja henkivakuutuksia — Suomen merkittävimmät vakuutusyhtiöt yhdessä paikassa.';
 export const SITE_TAGLINE = 'Vertaa. Säästä. Vakuuta.';
 
 // --- Compliance & Disclosure ---

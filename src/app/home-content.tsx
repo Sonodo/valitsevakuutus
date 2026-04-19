@@ -345,7 +345,10 @@ export default function HomeContent({
                     <p className="font-bold text-slate-900">{item.title}</p>
                     <p className="text-sm text-slate-500">{item.desc}</p>
                   </div>
-                  <ArrowRight className="ml-auto h-4 w-4 text-slate-400 transition-transform group-hover:translate-x-1" />
+                  <span className={`ml-auto inline-flex items-center gap-1 text-xs font-bold uppercase tracking-widest ${item.color} opacity-70 transition-opacity group-hover:opacity-100`}>
+                    Vertaile
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
                 </Link>
               </ScrollReveal>
             ))}

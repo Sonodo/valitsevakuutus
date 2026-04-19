@@ -33,6 +33,7 @@ import {
   estimateLifePremium,
 } from '@/lib/utils';
 import type { InsuranceType, InsuranceTier, CoverageItem } from '@/types';
+import { trackAffiliateClick, trackBeginCompare } from '@/lib/analytics';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Car, Home, Plane, PawPrint, Heart, ShieldPlus, Baby,
@@ -850,6 +851,7 @@ function ResultsList({
                         href={result.affiliateUrl}
                         target="_blank"
                         rel="sponsored nofollow noopener"
+                        onClick={() => trackAffiliateClick(result.providerName, insuranceType)}
                         className="inline-flex min-h-[44px] items-center gap-1.5 rounded-lg bg-amber px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-amber/90"
                       >
                         <span className="rounded-sm bg-white/20 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide">
@@ -952,6 +954,7 @@ export default function ComparisonCalculator() {
   const handleTypeSelect = (type: InsuranceType) => {
     setSelectedType(type);
     setFormValues({}); // Reset form when type changes
+    trackBeginCompare(type);
     router.replace(`?type=${type}`, { scroll: false });
     setStep(2);
   };

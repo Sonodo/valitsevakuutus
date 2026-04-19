@@ -8,6 +8,7 @@ import { providers, getProviderBySlug } from '@/data/providers';
 import { SITE_URL, SITE_NAME, getInsuranceTypeByType } from '@/lib/constants';
 import { formatSatisfaction, formatPercentage, classifyRating, formatDate } from '@/lib/utils';
 import type { InsuranceProvider, InsuranceProduct, FAQItem } from '@/types';
+import AffiliateCTA from '@/components/providers/AffiliateCTA';
 
 // --- Static params for all provider slugs ---
 export function generateStaticParams() {
@@ -344,17 +345,17 @@ export default async function ProviderDetailPage({
                 </p>
                 {provider.isAffiliate && provider.affiliateUrl ? (
                   <>
-                    <a
+                    <AffiliateCTA
                       href={provider.affiliateUrl}
-                      rel="sponsored nofollow noopener"
-                      target="_blank"
+                      provider={provider.shortName}
+                      productType="provider_page"
                       className="inline-flex items-center gap-2 rounded-lg bg-amber px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-amber/90"
                     >
                       <span className="rounded bg-white/25 px-2 py-0.5 text-xs font-bold uppercase tracking-wide">
                         Mainos
                       </span>
                       Siirry {provider.name}n sivuille
-                    </a>
+                    </AffiliateCTA>
                     <p className="mt-4 text-xs text-gray-500">
                       Linkki on kumppanuuslinkki. Jos otat vakuutuksen, saamme komission.
                       Sinulle hinta on täsmälleen sama. Lue{' '}

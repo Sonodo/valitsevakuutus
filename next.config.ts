@@ -30,6 +30,21 @@ const nextConfig: NextConfig = {
     }
     return [{ source: '/((?!sitemap\\.xml|robots\\.txt).*)', headers: securityHeaders }];
   },
+  async redirects() {
+    // Legacy route rename: /yhtiot/* → /vakuutusyhtiot/* (preserve SEO + backlinks)
+    return [
+      {
+        source: '/yhtiot/:slug*',
+        destination: '/vakuutusyhtiot/:slug*',
+        permanent: true,
+      },
+      {
+        source: '/yhtiot',
+        destination: '/vakuutusyhtiot',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
