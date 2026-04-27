@@ -37,7 +37,7 @@ export default function PrivacyPolicyPage() {
           <div className="prose max-w-none">
             <h2>1. Rekisterinpitäjä</h2>
             <p>
-              <strong>Sonodo — Henri Linnainmaa</strong>
+              <strong>Sonodo (toiminimi)</strong>
               <br />
               Helsinki, Suomi
               <br />

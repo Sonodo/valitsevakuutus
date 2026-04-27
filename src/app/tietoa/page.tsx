@@ -8,14 +8,14 @@ import { SITE_URL, SITE_NAME } from '@/lib/constants';
 export const metadata: Metadata = {
   title: 'Tietoa meistä — Toimitus, periaatteet ja vastuut',
   description:
-    'Valitse Vakuutus auttaa suomalaisia löytämään sopivimman vakuutuksen. Vastaava päätoimittaja Henri Linnainmaa, KTM. Toimituksen periaatteet, vertailumetodologia, sponsorointi ja yhteystiedot.',
+    'Valitse Vakuutus auttaa suomalaisia löytämään sopivimman vakuutuksen. Sonodon toimituksen periaatteet, vertailumetodologia, sponsorointi ja yhteystiedot.',
   alternates: {
     canonical: `${SITE_URL}/tietoa`,
   },
   openGraph: {
     title: `Tietoa meistä — Toimitus ja periaatteet | ${SITE_NAME}`,
     description:
-      'Vastaava päätoimittaja Henri Linnainmaa (KTM, Aalto). Toimituksen periaatteet, vertailumetodologia ja sponsoroinnin avoin merkintä.',
+      'Sonodon ylläpitämä riippumaton vakuutusvertailupalvelu. Toimituksen periaatteet, vertailumetodologia ja sponsoroinnin avoin merkintä.',
     url: `${SITE_URL}/tietoa`,
   },
 };
@@ -25,31 +25,7 @@ const breadcrumbs = [
   { label: 'Tietoa meistä', href: '/tietoa' },
 ];
 
-// ── Schema.org: Person + Organization + WebPage ────────────────
-const personSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  '@id': `${SITE_URL}/tietoa#henri-linnainmaa`,
-  name: 'Henri Linnainmaa',
-  honorificSuffix: 'KTM',
-  jobTitle: 'Vastaava päätoimittaja',
-  alumniOf: {
-    '@type': 'CollegeOrUniversity',
-    name: 'Aalto-yliopisto',
-  },
-  worksFor: {
-    '@type': 'Organization',
-    name: 'Sonodo',
-  },
-  knowsAbout: [
-    'Vakuutusten vertailu',
-    'Tekoäly',
-    'Data-analytiikka',
-    'Automaatio',
-    'Kuluttajatuotteiden vertailupalvelut',
-  ],
-};
-
+// ── Schema.org: Organization + WebPage ────────────────
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -61,15 +37,14 @@ const organizationSchema = {
     'Riippumaton suomalainen vakuutusten vertailupalvelu. Vertaa autovakuutuksia, kotivakuutuksia, matkavakuutuksia, lemmikkivakuutuksia ja henkivakuutuksia.',
   taxID: '2887416-4',
   vatID: 'FI28874164',
+  identifier: {
+    '@type': 'PropertyValue',
+    propertyID: 'FI Y-tunnus',
+    value: '2887416-4',
+  },
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'FI',
-  },
-  founder: {
-    '@id': `${SITE_URL}/tietoa#henri-linnainmaa`,
-  },
-  employee: {
-    '@id': `${SITE_URL}/tietoa#henri-linnainmaa`,
   },
 };
 
@@ -125,48 +100,37 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* ── Henri / Vastaava päätoimittaja ──────────────────── */}
+          {/* ── Toimitus ja vastuu ──────────────────── */}
           <section
-            id="vastaava-paatoimittaja"
+            id="toimitus"
             className="mt-12 scroll-mt-24 border-t border-gray-200 pt-10"
           >
             <h2 className="text-2xl font-bold text-navy">
-              Vastaava päätoimittaja
+              Toimitus ja vastuu
             </h2>
 
             <div className="mt-4 rounded-xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
-              <h3 className="text-xl font-semibold text-navy">
-                Henri Linnainmaa, KTM
-              </h3>
-              <p className="text-sm font-medium text-teal">
-                Aalto-yliopisto · Vastaava päätoimittaja, {SITE_NAME}
-              </p>
-
-              <div className="prose mt-4 max-w-none">
+              <div className="prose max-w-none">
                 <p>
-                  Henri Linnainmaa on kauppatieteiden maisteri Aalto-yliopistosta. Hän
-                  on urallaan konsultoinut yrityksiä tekoälyn soveltamisessa
-                  liiketoimintaan ja rakentanut kymmeniä tekoälytyökaluja ja
-                  automaatioratkaisuja yrityskäyttöön muun muassa raportointiin,
-                  analytiikkaan ja markkinointiin liittyen.
+                  {SITE_NAME}in toimituksellisesta sisällöstä, vertailumetodologiasta
+                  ja datankäsittelystä vastaa <strong>Sonodo</strong>. Toimitus
+                  määrittelee, miten vakuutusyhtiöiden hintatiedot kerätään, miten
+                  ne normalisoidaan vertailtavaan muotoon ja miten järjestysalgoritmi
+                  painottaa hintaa, kattavuutta ja asiakastyytyväisyyttä.
                 </p>
 
                 <p>
-                  {SITE_NAME}illa Henri vastaa <strong>vertailumetodologiasta ja
-                  datankäsittelystä</strong>: miten vakuutusyhtiöiden hintatiedot
-                  kerätään, miten ne normalisoidaan vertailtavaan muotoon ja miten
-                  järjestysalgoritmi painottaa hintaa, kattavuutta ja
-                  asiakastyytyväisyyttä. Henrin lähestymistapa yhdistää huolellisen
-                  arkkitehtuurisuunnittelun, laajan testauskattavuuden ja jatkuvan
-                  iteratiivisen kehittämisen.
+                  Toimituksen työtapa on data-analyyttinen: vertailun ja sivuston
+                  suorituskykyä seurataan mittareiden avulla, poikkeamat tunnistetaan
+                  datasta ja kehityspäätökset perustuvat todennettuihin havaintoihin.
+                  Tämä on edellytys luotettavalle ja jatkuvasti ajantasaiselle
+                  vakuutusvertailupalvelulle.
                 </p>
 
                 <p>
-                  Yhtä keskeisenä Henri pitää data-analyyttistä työtapaa: vertailun
-                  ja sivuston suorituskykyä seurataan mittareiden avulla, poikkeamat
-                  tunnistetaan datasta ja kehityspäätökset perustuvat todennettuihin
-                  havaintoihin. Tämä on edellytys luotettavalle ja jatkuvasti
-                  ajantasaiselle vakuutusvertailupalvelulle.
+                  Toimitus toimii itsenäisesti suhteessa kaupallisiin kumppaneihin —
+                  affiliate-sopimukset eivät vaikuta vertailujärjestykseen eivätkä
+                  toimituksellisiin sisältöihin.
                 </p>
               </div>
 
@@ -276,22 +240,6 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* ── Bylinet ───────────────────────────────────────── */}
-          <section className="mt-12 scroll-mt-24 border-t border-gray-200 pt-10">
-            <h2 className="text-2xl font-bold text-navy">
-              Bylinet ja toimituksen vastuu
-            </h2>
-            <p className="mt-4 text-gray-700">
-              Yksittäisten artikkelien yhteydessä näkyvä &quot;Toimituksen
-              tarkistama&quot; -merkintä ja vastaavan päätoimittajan nimi
-              tarkoittaa, että artikkeli on käynyt toimituksen tarkistuksen läpi
-              ennen julkaisua. Päivämäärä kertoo viimeisimmän tarkistuksen.
-              Yksittäisten artikkelien tekstin tuottaminen voi olla jaettua
-              toimitustyötä — vastaava päätoimittaja vastaa kokonaisuuden
-              laadusta, ei väitä kirjoittaneensa jokaista riviä.
-            </p>
-          </section>
-
           {/* ── Yhteystiedot ──────────────────────────────────── */}
           <section
             id="yhteystiedot"
@@ -311,12 +259,6 @@ export default function AboutPage() {
                 <div>
                   <dt className="inline font-semibold text-navy">Sijainti: </dt>
                   <dd className="inline">Suomi</dd>
-                </div>
-                <div>
-                  <dt className="inline font-semibold text-navy">
-                    Vastaava päätoimittaja:{' '}
-                  </dt>
-                  <dd className="inline">Henri Linnainmaa, KTM</dd>
                 </div>
                 <div>
                   <dt className="inline font-semibold text-navy">
@@ -370,10 +312,6 @@ export default function AboutPage() {
 
       <Footer />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

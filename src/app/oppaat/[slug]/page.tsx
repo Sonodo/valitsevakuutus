@@ -172,19 +172,6 @@ export default async function GuidePage({
                     {new Date(guide.updatedAt || guide.publishedAt).toLocaleDateString('fi-FI')}
                   </span>
                 </div>
-                <div className="mt-3 inline-flex items-center gap-2 rounded-lg bg-teal/5 px-3 py-2 text-xs text-teal-dark ring-1 ring-teal/20">
-                  <span className="font-semibold">Toimituksen tarkistama</span>
-                  <span aria-hidden="true">·</span>
-                  <span>
-                    Vastaava päätoimittaja:{' '}
-                    <Link
-                      href="/tietoa#vastaava-paatoimittaja"
-                      className="font-medium underline hover:text-teal"
-                    >
-                      Henri Linnainmaa, KTM
-                    </Link>
-                  </span>
-                </div>
               </header>
 
               {/* Mobile TOC */}
