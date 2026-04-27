@@ -168,7 +168,9 @@ export const FOOTER_LINKS = {
   })),
   tietoa: [
     { label: 'Tietoa meistä', href: '/tietoa' },
+    { label: 'Toimituksen periaatteet', href: '/tietoa#toimituksen-periaatteet' },
     { label: 'Näin vertailemme', href: '/metodologia' },
+    { label: 'Vakuutussanasto', href: '/sanasto' },
     { label: 'Yhteystiedot', href: '/yhteystiedot' },
     { label: 'Tietosuoja', href: '/tietosuoja' },
   ],

@@ -6,11 +6,17 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { SITE_URL, SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Tietoa meistä — Kuka tekee Valitse Vakuutuksen?',
+  title: 'Tietoa meistä — Toimitus, periaatteet ja vastuut',
   description:
-    'Valitse Vakuutus auttaa suomalaisia löytämään sopivimman vakuutuksen. Järjestys perustuu hintaan, kattavuuteen ja asiakastyytyväisyyteen — sama menetelmä jokaiselle tuotteelle.',
+    'Valitse Vakuutus auttaa suomalaisia löytämään sopivimman vakuutuksen. Vastaava päätoimittaja Henri Linnainmaa, KTM. Toimituksen periaatteet, vertailumetodologia, sponsorointi ja yhteystiedot.',
   alternates: {
     canonical: `${SITE_URL}/tietoa`,
+  },
+  openGraph: {
+    title: `Tietoa meistä — Toimitus ja periaatteet | ${SITE_NAME}`,
+    description:
+      'Vastaava päätoimittaja Henri Linnainmaa (KTM, Aalto). Toimituksen periaatteet, vertailumetodologia ja sponsoroinnin avoin merkintä.',
+    url: `${SITE_URL}/tietoa`,
   },
 };
 
@@ -18,6 +24,75 @@ const breadcrumbs = [
   { label: 'Etusivu', href: '/' },
   { label: 'Tietoa meistä', href: '/tietoa' },
 ];
+
+// ── Schema.org: Person + Organization + WebPage ────────────────
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': `${SITE_URL}/tietoa#henri-linnainmaa`,
+  name: 'Henri Linnainmaa',
+  honorificSuffix: 'KTM',
+  jobTitle: 'Vastaava päätoimittaja',
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Aalto-yliopisto',
+  },
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Sonodo',
+  },
+  knowsAbout: [
+    'Vakuutusten vertailu',
+    'Tekoäly',
+    'Data-analytiikka',
+    'Automaatio',
+    'Kuluttajatuotteiden vertailupalvelut',
+  ],
+};
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${SITE_URL}#organization`,
+  name: SITE_NAME,
+  legalName: 'Sonodo',
+  url: SITE_URL,
+  description:
+    'Riippumaton suomalainen vakuutusten vertailupalvelu. Vertaa autovakuutuksia, kotivakuutuksia, matkavakuutuksia, lemmikkivakuutuksia ja henkivakuutuksia.',
+  taxID: '2887416-4',
+  vatID: 'FI28874164',
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'FI',
+  },
+  founder: {
+    '@id': `${SITE_URL}/tietoa#henri-linnainmaa`,
+  },
+  employee: {
+    '@id': `${SITE_URL}/tietoa#henri-linnainmaa`,
+  },
+};
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  '@id': `${SITE_URL}/tietoa`,
+  url: `${SITE_URL}/tietoa`,
+  name: 'Tietoa meistä — Valitse Vakuutus',
+  about: { '@id': `${SITE_URL}#organization` },
+  mainEntity: { '@id': `${SITE_URL}#organization` },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbs.map((b, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: b.label,
+    item: `${SITE_URL}${b.href}`,
+  })),
+};
 
 export default function AboutPage() {
   return (
@@ -35,10 +110,10 @@ export default function AboutPage() {
           <div className="prose max-w-none">
             <h2>Mikä on {SITE_NAME}?</h2>
             <p>
-              {SITE_NAME} on puolueeton vakuutusvertailupalvelu, joka auttaa suomalaisia
-              löytämään sopivimman vakuutuksen omiin tarpeisiinsa. Vertailemme{' '}
-              <strong>Suomen merkittävimpien vakuutusyhtiöiden</strong> tuotteita,
-              hintoja ja ehtoja yhdessä paikassa.
+              {SITE_NAME} on puolueeton vakuutusvertailupalvelu, joka auttaa
+              suomalaisia löytämään sopivimman vakuutuksen omiin tarpeisiinsa.
+              Vertailemme <strong>Suomen merkittävimpien vakuutusyhtiöiden</strong>{' '}
+              tuotteita, hintoja ja ehtoja yhdessä paikassa.
             </p>
 
             <h2>Missiomme</h2>
@@ -48,99 +123,220 @@ export default function AboutPage() {
               jokaiselle tuotteelle — jotta sinä saat selkeän kuvan markkinasta
               yhdellä silmäyksellä ja voit päättää itse.
             </p>
-
-            <h2>Mitä teemme</h2>
-            <ul>
-              <li>
-                Vertailemme <strong>auto-, koti-, matka-, lemmikki-, henki-,
-                tapaturma- ja lapsivakuutuksia</strong> kattavasti
-              </li>
-              <li>
-                Hinta-arviot perustuvat <strong>julkisiin hintatietoihin ja
-                vakuutusyhtiöiden verkkolaskureihin</strong> — suuntaa-antavia,
-                eivät sitovia tarjouksia
-              </li>
-              <li>
-                Järjestys perustuu hintaan, kattavuuteen ja asiakastyytyväisyyteen —
-                sama menetelmä jokaiselle tuotteelle
-              </li>
-              <li>
-                Emme ole vakuutusneuvoja emmekä vakuutusmeklari — olemme tietopalvelu
-              </li>
-              <li>
-                Lopullinen päätös vakuutuksen ostamisesta on aina sinun ja vakuutusyhtiön
-                välinen asia
-              </li>
-            </ul>
-
-            <h2>Tietolähteemme</h2>
-            <p>
-              Hintatietomme perustuvat vakuutusyhtiöiden julkisiin hintatietoihin,
-              verkkolaskureihin ja kuluttajakyselyihin. Päivitämme hintatiedot
-              säännöllisesti. Jokainen vertailusivu näyttää viimeisimmän
-              päivityspäivämäärän.
-            </p>
-
-            <h2 id="nain-ansaitsemme">Näin ansaitsemme rahaa</h2>
-            <p>
-              {SITE_NAME} on ilmainen käyttäjille. Pidämme palvelun pystyssä
-              kahdella tavalla:
-            </p>
-            <ol>
-              <li>
-                <strong>Affiliate-komissiot.</strong> Osa vakuutusyhtiöiden linkeistä
-                on kumppanuuslinkkejä. Kun siirryt niiden kautta yhtiön sivulle ja
-                otat vakuutuksen, saamme kiinteän komission. Sinulle hinta on täsmälleen
-                sama kuin ilman linkkiämme — komissio tulee yhtiön omasta markkinointibudjetista.
-              </li>
-              <li>
-                <strong>Display-mainonta.</strong> Saatamme näyttää sivustolla
-                Google Adsense -mainoksia tai muuta display-mainontaa.
-              </li>
-            </ol>
-            <p>
-              Jokainen mainos- tai affiliate-linkki on merkitty selkeästi{' '}
-              <strong>Mainos-merkinnällä</strong>. Affiliate-sopimus ei vaikuta
-              vertailujärjestykseen eikä siihen, mitä yhtiöitä vertailuumme sisältyy.
-              Emme saa komissiota sisällöstä, oppaista tai vertailutaulukoista.
-            </p>
-
-            <h2>Sääntely ja rooli</h2>
-            <p>
-              {SITE_NAME} toimii <strong>tietopalveluna</strong>, ei vakuutusneuvojana
-              eikä vakuutusmeklarina. Emme ole rekisteröityneet Finanssivalvontaan
-              vakuutusedustajaksi, koska emme välitä vakuutussopimuksia emmekä anna
-              henkilökohtaista vakuutusneuvontaa. Tarjoamme informaatiota ja työkaluja,
-              joiden avulla voit itse verrata markkinaa ja tehdä päätöksen.
-            </p>
-
-            <h2>Arvomme</h2>
-            <ul>
-              <li>
-                <strong>Käyttäjä ensin:</strong> jokainen päätös optimoidaan sen
-                mukaan, mikä palvelee kuluttajaa parhaiten
-              </li>
-              <li>
-                <strong>Puolueettomuus:</strong> sama menetelmä jokaiselle tuotteelle,
-                ei suosikkeja, ei piilotettuja tuloksia
-              </li>
-              <li>
-                <strong>Ajantasaisuus:</strong> tarkistamme hintatiedot säännöllisesti,
-                jotta näet aina ajantasaisen kuvan markkinasta
-              </li>
-              <li>
-                <strong>Koulutus:</strong> autamme ymmärtämään vakuutuksia ennen
-                ostopäätöstä — selkokielisiä oppaita ja vertailuja
-              </li>
-              <li>
-                <strong>Yksityisyyden suoja:</strong> emme kerää henkilötietoja
-                vertailun tekemiseen
-              </li>
-            </ul>
           </div>
 
-          {/* Links */}
-          <div className="mt-12 grid gap-4 sm:grid-cols-2">
+          {/* ── Henri / Vastaava päätoimittaja ──────────────────── */}
+          <section
+            id="vastaava-paatoimittaja"
+            className="mt-12 scroll-mt-24 border-t border-gray-200 pt-10"
+          >
+            <h2 className="text-2xl font-bold text-navy">
+              Vastaava päätoimittaja
+            </h2>
+
+            <div className="mt-4 rounded-xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
+              <h3 className="text-xl font-semibold text-navy">
+                Henri Linnainmaa, KTM
+              </h3>
+              <p className="text-sm font-medium text-teal">
+                Aalto-yliopisto · Vastaava päätoimittaja, {SITE_NAME}
+              </p>
+
+              <div className="prose mt-4 max-w-none">
+                <p>
+                  Henri Linnainmaa on kauppatieteiden maisteri Aalto-yliopistosta. Hän
+                  on urallaan konsultoinut yrityksiä tekoälyn soveltamisessa
+                  liiketoimintaan ja rakentanut kymmeniä tekoälytyökaluja ja
+                  automaatioratkaisuja yrityskäyttöön muun muassa raportointiin,
+                  analytiikkaan ja markkinointiin liittyen.
+                </p>
+
+                <p>
+                  {SITE_NAME}illa Henri vastaa <strong>vertailumetodologiasta ja
+                  datankäsittelystä</strong>: miten vakuutusyhtiöiden hintatiedot
+                  kerätään, miten ne normalisoidaan vertailtavaan muotoon ja miten
+                  järjestysalgoritmi painottaa hintaa, kattavuutta ja
+                  asiakastyytyväisyyttä. Henrin lähestymistapa yhdistää huolellisen
+                  arkkitehtuurisuunnittelun, laajan testauskattavuuden ja jatkuvan
+                  iteratiivisen kehittämisen.
+                </p>
+
+                <p>
+                  Yhtä keskeisenä Henri pitää data-analyyttistä työtapaa: vertailun
+                  ja sivuston suorituskykyä seurataan mittareiden avulla, poikkeamat
+                  tunnistetaan datasta ja kehityspäätökset perustuvat todennettuihin
+                  havaintoihin. Tämä on edellytys luotettavalle ja jatkuvasti
+                  ajantasaiselle vakuutusvertailupalvelulle.
+                </p>
+              </div>
+
+              <p className="mt-4 text-sm text-gray-500">
+                Yhteys toimitukseen:{' '}
+                <Link
+                  href="/yhteystiedot"
+                  className="text-teal hover:text-teal-dark"
+                >
+                  /yhteystiedot
+                </Link>
+              </p>
+            </div>
+          </section>
+
+          {/* ── Toimituksen periaatteet ───────────────────────────── */}
+          <section
+            id="toimituksen-periaatteet"
+            className="mt-12 scroll-mt-24 border-t border-gray-200 pt-10"
+          >
+            <h2 className="text-2xl font-bold text-navy">
+              Toimituksen periaatteet
+            </h2>
+            <p className="mt-4 text-gray-700">
+              Seuraavat periaatteet ohjaavat kaikkea {SITE_NAME}illa julkaistavaa
+              sisältöä — vertailutaulukoista oppaisiin ja blogiartikkeleihin.
+            </p>
+
+            <div className="mt-6 space-y-6">
+              <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
+                <h3 className="font-semibold text-navy">
+                  1. Vertailujärjestys ja pisteytys
+                </h3>
+                <p className="mt-2 text-sm text-gray-700">
+                  Vertailujärjestys lasketaan samalla menetelmällä jokaiselle
+                  tuotteelle: painotamme hintaa, kattavuutta ja
+                  asiakastyytyväisyyttä. Affiliate-sopimus tai mainostulot{' '}
+                  <strong>eivät vaikuta</strong> vertailujärjestykseen. Tarkka
+                  metodologia on luettavissa erillisellä{' '}
+                  <Link
+                    href="/metodologia"
+                    className="text-teal hover:text-teal-dark"
+                  >
+                    metodologia-sivulla
+                  </Link>
+                  .
+                </p>
+              </div>
+
+              <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
+                <h3 className="font-semibold text-navy">
+                  2. Sponsoroinnin avoin merkintä
+                </h3>
+                <p className="mt-2 text-sm text-gray-700">
+                  Mahdolliset kumppanuuslinkit on merkitty selkeästi{' '}
+                  <strong>Mainos</strong>-merkinnällä, ja ne käyttävät teknistä{' '}
+                  <code className="rounded bg-gray-100 px-1 py-0.5 text-xs">
+                    rel=&quot;sponsored&quot;
+                  </code>{' '}
+                  -määritettä. Sivuston alalaidassa on jatkuvasti näkyvissä
+                  yleinen sponsorointi-disclosure ja kuvaus siitä, miten
+                  ansaitsemme rahaa. Linkin tyyppi ei vaikuta tuotteen sijoitukseen
+                  vertailussa.
+                </p>
+              </div>
+
+              <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
+                <h3 className="font-semibold text-navy">
+                  3. Tietojen päivittäminen
+                </h3>
+                <p className="mt-2 text-sm text-gray-700">
+                  Pyrimme päivittämään hinta- ja kattavuustiedot{' '}
+                  <strong>vähintään kvartaaleittain</strong> ja merkittävien
+                  hinnastomuutosten yhteydessä viipymättä. Jokainen tuoterivi
+                  näyttää viimeisimmän tarkistuspäivämäärän. Hinnat ovat
+                  suuntaa-antavia arvioita julkisten tietojen perusteella —
+                  lopullinen hinta perustuu vakuutusyhtiön omaan tarjoukseen.
+                </p>
+              </div>
+
+              <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
+                <h3 className="font-semibold text-navy">
+                  4. Korjaukset ja palautteet
+                </h3>
+                <p className="mt-2 text-sm text-gray-700">
+                  Jos havaitset sisällössämme virheen, ota yhteyttä toimitukseen.
+                  Käsittelemme palautteet pääsääntöisesti viiden arkipäivän
+                  kuluessa ja merkitsemme korjaukset näkyvästi. Vakuutusyhtiöiden
+                  oikaisupyynnöt käsitellään samalla prosessilla — emme poista
+                  perusteltua kritiikkiä, mutta korjaamme tosiasiavirheet aina.
+                </p>
+              </div>
+
+              <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
+                <h3 className="font-semibold text-navy">
+                  5. Sääntelyrooli
+                </h3>
+                <p className="mt-2 text-sm text-gray-700">
+                  {SITE_NAME} toimii <strong>tietopalveluna</strong>, ei
+                  vakuutusneuvojana eikä vakuutusasiamiehenä. Emme ole
+                  rekisteröityneet <strong>Finanssivalvontaan (FIN-FSA)</strong>,
+                  koska emme välitä vakuutussopimuksia emmekä anna
+                  henkilökohtaista vakuutusneuvontaa. Lopullinen sopimus tehdään
+                  aina sinun ja vakuutusyhtiön välillä.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* ── Bylinet ───────────────────────────────────────── */}
+          <section className="mt-12 scroll-mt-24 border-t border-gray-200 pt-10">
+            <h2 className="text-2xl font-bold text-navy">
+              Bylinet ja toimituksen vastuu
+            </h2>
+            <p className="mt-4 text-gray-700">
+              Yksittäisten artikkelien yhteydessä näkyvä &quot;Toimituksen
+              tarkistama&quot; -merkintä ja vastaavan päätoimittajan nimi
+              tarkoittaa, että artikkeli on käynyt toimituksen tarkistuksen läpi
+              ennen julkaisua. Päivämäärä kertoo viimeisimmän tarkistuksen.
+              Yksittäisten artikkelien tekstin tuottaminen voi olla jaettua
+              toimitustyötä — vastaava päätoimittaja vastaa kokonaisuuden
+              laadusta, ei väitä kirjoittaneensa jokaista riviä.
+            </p>
+          </section>
+
+          {/* ── Yhteystiedot ──────────────────────────────────── */}
+          <section
+            id="yhteystiedot"
+            className="mt-12 scroll-mt-24 border-t border-gray-200 pt-10"
+          >
+            <h2 className="text-2xl font-bold text-navy">Yhteystiedot</h2>
+            <div className="mt-4 rounded-xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
+              <dl className="space-y-2 text-sm text-gray-700">
+                <div>
+                  <dt className="inline font-semibold text-navy">Toiminimi: </dt>
+                  <dd className="inline">Sonodo</dd>
+                </div>
+                <div>
+                  <dt className="inline font-semibold text-navy">Y-tunnus: </dt>
+                  <dd className="inline">2887416-4</dd>
+                </div>
+                <div>
+                  <dt className="inline font-semibold text-navy">Sijainti: </dt>
+                  <dd className="inline">Suomi</dd>
+                </div>
+                <div>
+                  <dt className="inline font-semibold text-navy">
+                    Vastaava päätoimittaja:{' '}
+                  </dt>
+                  <dd className="inline">Henri Linnainmaa, KTM</dd>
+                </div>
+                <div>
+                  <dt className="inline font-semibold text-navy">
+                    Yhteyslomake:{' '}
+                  </dt>
+                  <dd className="inline">
+                    <Link
+                      href="/yhteystiedot"
+                      className="text-teal hover:text-teal-dark"
+                    >
+                      /yhteystiedot
+                    </Link>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </section>
+
+          {/* ── Cross-links ───────────────────────────────────── */}
+          <div className="mt-12 grid gap-4 sm:grid-cols-3">
             <Link
               href="/metodologia"
               className="rounded-lg bg-white p-6 shadow-sm ring-1 ring-gray-200 transition-shadow hover:shadow-md"
@@ -148,6 +344,15 @@ export default function AboutPage() {
               <h3 className="mb-2 font-semibold text-navy">Näin vertailemme</h3>
               <p className="text-sm text-gray-600">
                 Lue miten vertailujärjestys ja pisteet lasketaan.
+              </p>
+            </Link>
+            <Link
+              href="/sanasto"
+              className="rounded-lg bg-white p-6 shadow-sm ring-1 ring-gray-200 transition-shadow hover:shadow-md"
+            >
+              <h3 className="mb-2 font-semibold text-navy">Vakuutussanasto</h3>
+              <p className="text-sm text-gray-600">
+                25 keskeistä vakuutustermiä selitettynä selkokielellä.
               </p>
             </Link>
             <Link
@@ -164,6 +369,23 @@ export default function AboutPage() {
       </main>
 
       <Footer />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     </>
   );
 }

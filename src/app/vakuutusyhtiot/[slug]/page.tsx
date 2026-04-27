@@ -9,6 +9,7 @@ import { SITE_URL, SITE_NAME, getInsuranceTypeByType } from '@/lib/constants';
 import { formatSatisfaction, formatPercentage, classifyRating, formatDate } from '@/lib/utils';
 import type { InsuranceProvider, InsuranceProduct, FAQItem } from '@/types';
 import AffiliateCTA from '@/components/providers/AffiliateCTA';
+import ProviderSchema from '@/components/seo/ProviderSchema';
 
 // --- Static params for all provider slugs ---
 export function generateStaticParams() {
@@ -76,20 +77,7 @@ export default async function ProviderDetailPage({
     )
     .slice(0, 3);
 
-  // Schema.org
-  const providerSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: provider.name,
-    url: provider.website,
-    description: provider.longDescription,
-    foundingDate: String(provider.founded),
-    numberOfEmployees: {
-      '@type': 'QuantitativeValue',
-      value: provider.employeeCount,
-    },
-  };
-
+  // Schema.org — InsuranceProduct + Organization JSON-LD via shared component
   const faqSchema = provider.faq.length > 0
     ? {
         '@context': 'https://schema.org',
@@ -255,7 +243,8 @@ export default async function ProviderDetailPage({
                             {products.map((product) => (
                               <tr
                                 key={product.id}
-                                className="border-b border-gray-100"
+                                id={product.id}
+                                className="border-b border-gray-100 scroll-mt-24"
                               >
                                 <td className="px-4 py-3 font-medium text-navy">
                                   {product.name}
@@ -454,10 +443,7 @@ export default async function ProviderDetailPage({
 
       <Footer />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(providerSchema) }}
-      />
+      <ProviderSchema provider={provider} />
       {faqSchema && (
         <script
           type="application/ld+json"

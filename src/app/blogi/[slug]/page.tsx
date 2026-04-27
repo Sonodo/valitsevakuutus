@@ -151,10 +151,26 @@ export default async function BlogArticlePage({
                   {post.title}
                 </h1>
                 <p className="mb-4 text-lg text-gray-600">{post.description}</p>
-                <div className="flex items-center gap-4 text-sm text-gray-500">
-                  <span>{post.author}</span>
-                  <span>|</span>
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-500">
                   <span>{post.readTime} min lukuaika</span>
+                  <span>|</span>
+                  <span>
+                    Päivitetty{' '}
+                    {new Date(post.updatedAt || post.publishedAt).toLocaleDateString('fi-FI')}
+                  </span>
+                </div>
+                <div className="mt-3 inline-flex items-center gap-2 rounded-lg bg-teal/5 px-3 py-2 text-xs text-teal-dark ring-1 ring-teal/20">
+                  <span className="font-semibold">Toimituksen tarkistama</span>
+                  <span aria-hidden="true">·</span>
+                  <span>
+                    Vastaava päätoimittaja:{' '}
+                    <Link
+                      href="/tietoa#vastaava-paatoimittaja"
+                      className="font-medium underline hover:text-teal"
+                    >
+                      Henri Linnainmaa, KTM
+                    </Link>
+                  </span>
                 </div>
               </header>
 
