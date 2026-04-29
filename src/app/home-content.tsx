@@ -293,7 +293,7 @@ export default function HomeContent({
 
       {/* ─────────────────────────────────────────────────────────────
           SECTION 3: INSURANCE CATEGORIES — Gradient color progression
-          Teal gradient steps like Lakimaatti process
+          Teal gradient process-step cards
          ───────────────────────────────────────────────────────────── */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
